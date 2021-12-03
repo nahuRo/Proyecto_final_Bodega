@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<script src="https://kit.fontawesome.com/ef997cdb75.js" crossorigin="anonymous"></script> <!-- ICONOS -->
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<title>Bodega</title>
 	<!-- FAVICON ( NO SE LO AGREGUE PORQUE TODAVIA NO ENCUENTRO UNO ) -->
 </head>
@@ -19,14 +20,14 @@
 				</a>
 			</div> 
 			<ul class="cont__menu">
-				<li><a class="active negrita" href="index.html">Home</a></li>
+				<li><a class="active negrita " href="index.html">Home</a></li>
 				<li><a class="negrita" href="vinos.html">Vinos</a></li>
 				<li><a class="negrita" href="turismo.html">Turismo</a></li>
 				<li><a class="negrita" href="restaurante.html">Restaurante</a></li>
 				<li><a class="negrita" href="bodega.html">Bodega</a></li>
 			</ul>
 		</div>
-		<div class="cont__img__home">
+		<div class="cont__img__home ">
 			<!-- CARRUSEL DE IMAGENES - SECCIONES DE LA PAGINA , SOLAMENTE EN EL HOME  -->
 		</div>
 
@@ -45,13 +46,13 @@
 				</div>
 			</div>
 			<div class="cont__img"> <!-- CONTENEDOR IMAGEN -->
-				<img src="assets/wine.jpg" alt="">
+				<img class="wow animate__animated animate__fadeInRight" src="assets/wine.jpg" alt="">
 			</div>
 		</div>
 
 		<div class="section sectionMobile fondoDos container"> <!-- SECTION - TURISMO (INTRO) + ENLACE -->
 			<div class="cont__img"> <!-- CONTENEDOR IMAGEN -->
-				<img src="assets/turismo.jpg" alt="">
+				<img class="wow animate__animated  animate__fadeInLeft" src="assets/turismo.jpg" alt="">
 			</div>
 			<div class="cont__text"> <!-- CONTENEDOR TEXTO -->
 				<p class="titulo negrita">TURISMO</p>
@@ -73,13 +74,13 @@
 				</div>
 			</div>
 			<div class="cont__img"> <!-- CONTENEDOR IMAGEN -->
-				<img src="assets/fooHome.jpg" alt="">
+				<img class="wow animate__animated animate__fadeInRight" src="assets/fooHome.jpg" alt="">
 			</div>
 		</div>
 
 		<div class="section sectionMobile fondoDos container"> <!-- SECTION - BODEGA (INTRO) + ENLACE -->
 			<div class="cont__img"> <!-- CONTENEDOR IMAGEN -->
-				<img src="assets/bodega.jpg" alt="">
+				<img class="wow animate__animated  animate__fadeInLeft" src="assets/bodega.jpg" alt="">
 			</div>
 			<div class="cont__text"> <!-- CONTENEDOR TEXTO -->
 				<p class="titulo negrita">NUESTROS HISTORIA</p>
@@ -105,6 +106,9 @@
 		</div>
 		<iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13379.204439072955!2d-68.916136!3d-33.03537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31d6e1f51af10094!2sBodega%20Vistalba!5e0!3m2!1ses!2sar!4v1636061941426!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>	
 	</div>
-
+	<script src="js/wow.js"></script>
+	<script>
+	new WOW().init();
+	</script>
 </body>
 </html>
