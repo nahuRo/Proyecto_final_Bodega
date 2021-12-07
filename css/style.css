@@ -2,7 +2,7 @@
 *{
     padding: 0; margin: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 body{
@@ -15,7 +15,7 @@ html{
     font-size: 62.5%;
 }
 
-.container{ /* Utilidades */
+.containerMio{ /* Utilidades */
     height: 100vh;
 }
 .container__turismo{
@@ -69,9 +69,6 @@ html{
     text-align: center;
 }
 
-.header{
-    background-color: #E6CCA9;
-}
 
 /* --- HEADER HOME ---  */
 
@@ -111,15 +108,25 @@ html{
     border-bottom: #000 2px solid;
 }
 
-.cont__img__home{
-    background: url(../assets/bodegita.jpg) no-repeat center fixed;
+
+/* ///////////////////////////// */
+
+
+.container-fluid .carousel-item.active img{
     height: 100vh;
 }
+
+
+
+
+/* /////////////////////////////// */
+
+
 
 /* --- MAIN ---  */
 
 .margin__top{
-    margin: 8.6rem 0 0 0;
+    margin: 8rem 0 0 0;
 }
 
 .margin__right{
@@ -351,10 +358,10 @@ span{
 
 /* ----------------------   SECCION BODEGA  --------------------------*/
 
-.conImgBod{
+/* .conImgBod{
     background: url(../assets/bodegafinal.jpg) no-repeat center fixed;
     height: 100vh;
-}
+} */
 
 .espacio__texto{
     line-height: 2.5rem;

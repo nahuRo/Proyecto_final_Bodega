@@ -4,14 +4,16 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://kit.fontawesome.com/ef997cdb75.js" crossorigin="anonymous"></script> <!-- ICONOS -->
+	<script src="https://kit.fontawesome.com/ef997cdb75.js" crossorigin="anonymous"></script> 
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+	
 	<title>Bodega</title>
 	<!-- FAVICON ( NO SE LO AGREGUE PORQUE TODAVIA NO ENCUENTRO UNO ) -->
 </head>
 <body>
-	<div class="header container"> <!-- HEADER -->
+	<div class="header containerMio"> <!-- HEADER -->
 
 		<div class="nav">
 			<div class="cont__logo">
@@ -27,15 +29,42 @@
 				<li><a class="negrita" href="bodega.html">Bodega</a></li>
 			</ul>
 		</div>
-		<div class="cont__img__home ">
-			<!-- CARRUSEL DE IMAGENES - SECCIONES DE LA PAGINA , SOLAMENTE EN EL HOME  -->
+		<div class="container-fluid">
+
+
+			<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+				<div class="carousel-inner">
+				  <div class="carousel-item active">
+					<img src="assets/bodegita.jpg" class="d-block w-100 " alt="bodega">
+				  </div>
+				  <div class="carousel-item">
+					<img src="assets/buho.jpg" class="d-block w-100"  alt="buho">
+				  </div>
+				  <div class="carousel-item">
+					<img src="assets/comida.jpg" class="d-block w-100 " alt="comida">
+				  </div>
+				  <div class="carousel-item">
+					<img src="assets/vista2.jpg" class="d-block w-100 " alt="bodega">
+				  </div>
+				</div>
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Previous</span>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="visually-hidden">Next</span>
+				</button>
+			  </div>
+
+
 		</div>
 
 	</div>
 
 	<div class="main margin "> <!-- MAIN - HOME -->
 
-		<div class="section fondoUno container "> <!-- SECTION - VINOS (INTRO) + ENLACE -->
+		<div class="section fondoUno containerMio "> <!-- SECTION - VINOS (INTRO) + ENLACE -->
 			<div class="cont__text"> <!-- CONTENEDOR TEXTO -->
 				<p class="titulo negrita">NUESTROS VINOS</p>
 				<p>Elaboramos vinos de alta gama a partir de las uvas cosechadas en nuestra finca Emblema, situada en Agrelo, y en las mejores zonas del Valle de Uco en la provincia de Mendoza.</p>
@@ -50,7 +79,7 @@
 			</div>
 		</div>
 
-		<div class="section sectionMobile fondoDos container"> <!-- SECTION - TURISMO (INTRO) + ENLACE -->
+		<div class="section sectionMobile fondoDos containerMio"> <!-- SECTION - TURISMO (INTRO) + ENLACE -->
 			<div class="cont__img"> <!-- CONTENEDOR IMAGEN -->
 				<img class="wow animate__animated  animate__fadeInLeft" src="assets/turismo.jpg" alt="">
 			</div>
@@ -64,7 +93,7 @@
 			</div>
 		</div>
 		
-		<div class="section fondoUno container"> <!-- SECTION - RESTAURANTE (INTRO) + ENLACE -->
+		<div class="section fondoUno containerMio"> <!-- SECTION - RESTAURANTE (INTRO) + ENLACE -->
 			<div class="cont__text"> <!-- CONTENEDOR TEXTO -->
 				<p class="titulo negrita">RESTAURANTE</p>
 				<p>Ya sea que se trate de un almuerzo íntimo para dos, en familia o con un grupo de amigos, Finca Filgo ofrece ingredientes locales de calidad para lograr una creativa experiencia gastronómica en un ambiente relajado con la vista panorámica de la cordillera de los Andes.</p>
@@ -78,7 +107,7 @@
 			</div>
 		</div>
 
-		<div class="section sectionMobile fondoDos container"> <!-- SECTION - BODEGA (INTRO) + ENLACE -->
+		<div class="section sectionMobile fondoDos containerMio"> <!-- SECTION - BODEGA (INTRO) + ENLACE -->
 			<div class="cont__img"> <!-- CONTENEDOR IMAGEN -->
 				<img class="wow animate__animated  animate__fadeInLeft" src="assets/bodega.jpg" alt="">
 			</div>
@@ -110,5 +139,6 @@
 	<script>
 	new WOW().init();
 	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
