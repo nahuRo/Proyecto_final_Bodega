@@ -1,38 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/ef997cdb75.js" crossorigin="anonymous"></script> 
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" href="css/style.css">
-	<script src="https://kit.fontawesome.com/ef997cdb75.js" crossorigin="anonymous"></script>
+
 	<title>Bodega</title>
 	<!-- FAVICON ( NO SE LO AGREGUE PORQUE TODAVIA NO ENCUENTRO UNO ) -->
 </head>
 <body>
-	<div class="header"> <!-- HEADER -->
-		<div class="nav">
-			<div class="cont__logo">
-				<a href="index.html">
-					<img src="assets/logo.svg" alt="">
-				</a>
-			</div> 
-			<ul class="cont__menu">
-				<li><a class="negrita" href="index.html">Home</a></li>
-				<li><a class="negrita" href="vinos.html">Vinos</a></li>
-				<li><a class="active negrita" href="turismo.html">Turismo</a></li>
-				<li><a class="negrita" href="restaurante.html">Restaurante</a></li>
-				<li><a class="negrita" href="bodega.html">Bodega</a></li>
-			</ul>
+	<nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top ">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="index.html">
+				<img src="assets/logo.svg" alt="logo filgo" width="100" height="60">
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!--PARA BOTON HAMBURGUESA-->
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+					<li class="nav-item"><a class="nav-link" href="vinos.html">Vinos</a></li>
+					<li class="nav-item"><a class="nav-link active" href="turismo.html">Turismo</a></li>
+					<li class="nav-item"><a class="nav-link" href="restaurante.html">Restaurante</a></li>
+					<li class="nav-item"><a class="nav-link" href="bodega.html">Bodega</a></li>
+				</ul>
+			</div>
 		</div>
+	</nav>
 
-	</div>
-
-	<div class="margin__top "> <!-- MAIN - TURISMO -->
+	<div class="mt-5"> <!-- MAIN - TURISMO -->
 		<div class="container__turismo cont__tarjetas fondoUno">
 			<div class="section__t text1 cont__t uno">
 				<p class="titulo negrita">EN EL VIÑEDO</p>
 				<p>¡Una muy divertida experiencia! Recorreremos los viñedos en bicicleta, realizaremos una visita guiada a la bodega para conocer el área de elaboración de vinos, la cava de barricas y la bodega de Espumantes. Realizaremos una cata dirigida de la línea Famiglia Bianchi en la cava privada de la familia y degustaremos nuestro espumante método tradicional.</p>
-				<img class="separador" src="assets/separador.png" alt="">
+				<img class="separador" src="assets/separador.png" alt="linea de puntos para separar texto">
 				<p><br/> Duración de la Experiencia: 90 minutos. <br/>
 					Cupos: 2 - máx. 12 personas.<br/>
 					Modalidad / Reservas: con reserva previa.<br/>
@@ -40,16 +46,16 @@
 				</p>
 			</div>
 			<div class="cont__img__gen foto1 dos">
-				<img src="assets/viñedo.jpg" alt="">
+				<img src="assets/viñedo.jpg" alt="viñedo">
 			</div>
 		
 			<div class="cont__img__gen foto2 cuatro">
-				<img src="assets/degustacion.jpg" alt="">
+				<img src="assets/degustacion.jpg" alt="degustacion">
 			</div>
 			<div class="section__t text2 cont__t tres">
 				<p class="titulo negrita">VISITA A LA BODEGA Y DEGUSTACIÓN</p>
 				<p>En esta experiencia recorreremos parte del viñedo, caminaremos por la bodega y aprenderemos sobre la elaboración de vinos y espumantes. Conoceremos los secretos que pasaron de generación en generación, la cultura transmitida por los trabajadores y la familia, en más de 90 años de historia de la bodega. Disfrutaremos una cata dirigida de la línea Famiglia Bianchi en la cava privada de la familia, sumando a la degustación nuestro espumante método tradicional.</p>
-				<img class="separador" src="assets/separador.png" alt="">
+				<img class="separador" src="assets/separador.png" alt="linea de puntos para separar texto">
 				<p><br/> Duración de la Experiencia: 60 minutos <br/>
 					Cupos: mín. 2 - máx. 14 personas.<br/>
 					Modalidad / Reservas: con reserva previa.<br/>
@@ -62,7 +68,7 @@
 			<div class="section__t text3 cont__t cinco">
 				<p class="titulo negrita">EL VIÑEDO EN BICICLETA</p>
 				<p>¡Una muy divertida experiencia! Recorreremos los viñedos en bicicleta, realizaremos una visita guiada a la bodega para conocer el área de elaboración de vinos, la cava de barricas y la bodega de Espumantes. Realizaremos una cata dirigida de la línea Famiglia Bianchi en la cava privada de la familia y degustaremos nuestro espumante método tradicional.</p>
-				<img class="separador" src="assets/separador.png" alt="">
+				<img class="separador" src="assets/separador.png" alt="linea de puntos para separar texto">
 				<p><br/> Duración de la Experiencia: 90 minutos <br/>
 					Cupos: mín. 2 - máx. 12 personas.<br/>
 					Modalidad / Reservas: con reserva previa.<br/>
@@ -70,16 +76,16 @@
 				</p>
 			</div>
 			<div class="cont__img__gen foto3 seis">
-				<img src="assets/bike.jpg" alt="">
+				<img src="assets/bike.jpg" alt="turista en bici">
 			</div>
 	
 			<div class="cont__img__gen foto4 ocho">
-				<img src="assets/cabalgata.jpg" alt="">
+				<img src="assets/cabalgata.jpg" alt="turistas cabalgando">
 			</div>
 			<div class="section__t text4 cont__t siete">
 				<p class="titulo negrita">EL VIÑEDO A CABALLO</p>
 				<p>Recorreremos los viñedos a caballo y disfrutaremos una cabalgata con las temperaturas más bajas de la mañana. Conoceremos la bodega de vinos tranquilos, la cava de barricas y la bodega de espumantes. Degustaremos la línea Familia Bianchi en la cava privada de la familia y nuestro espumante método tradicional para cerrar esta experiencia.</p>
-				<img class="separador" src="assets/separador.png" alt="">
+				<img class="separador" src="assets/separador.png" alt="linea de puntos para separar texto">
 				<p><br/> Duración de la Experiencia: 120 minutos <br/>
 					Cupos: mín. 2 - máx. 8 personas.<br/>
 					Modalidad / Reservas: con reserva previa.<br/>
@@ -92,7 +98,7 @@
 			<div class="section__t text5 cont__t">
 				<p class="titulo negrita">CREA TU CORTE DE VINO</p>
 				<p>Convertirnos en enólogo por un día y realizar nuestro propio corte de vino es posible. Nos encontraremos en la cúpula central para aprender sobre los diferentes cortes de vino, características y estilos. Mezclaremos, buscaremos, crearemos sin límites y elegiremos qué nos gusta. No es necesario contar con conocimientos previos. Recorreremos la bodega y degustaremos nuestro espumante, método tradicional. Como obsequio ¡una botella de uno de nuestros blends!</p>
-				<img class="separador" src="assets/separador.png" alt="">
+				<img class="separador" src="assets/separador.png" alt="linea de puntos para separar texto">
 				<p><br/>Duración de la Experiencia: 90 minutos <br/>
 					Cupos: mín. 2 - máx. 10 personas.<br/>
 					Modalidad / Reservas: con reserva previa.<br/>
@@ -100,16 +106,16 @@
 				</p>
 			</div>
 			<div class="cont__img__gen foto5 diez">
-				<img src="assets/self.jpg" alt="">
+				<img src="assets/self.jpg" alt="persona sirviendo vino">
 			</div>
 	
 			<div class="cont__img__gen foto6 doce">
-				<img src="assets/picada.jpg" alt="">
+				<img src="assets/picada.jpg" alt="turistas disfrutando de comida">
 			</div>
 			<div class="section__t text6 cont__t once">
 				<p class="titulo negrita">PICADA Y VINO</p>
 				<p>Siéntese a contemplar la hermosa vista panorámica de nuestro salón de turismo mientras disfruta una exquisita tabla de carnes ahumadas: Ciervo, Jabalí, Ñandú, y quesos ahumados. Acompañe este momento degustando dos copas del vino premiado Famiglia Bianchi.</p>
-				<img class="separador" src="assets/separador.png" alt="">
+				<img class="separador" src="assets/separador.png" alt="linea de puntos para separar texto">
 				<p><br/>Cupos: para 2 personas <br/>
 					Modalidad / Reservas: con reserva previa.<br/>
 					Horarios: 09:30 a 16:00.<br/>
@@ -119,7 +125,7 @@
 
 		 <div class="container__turismo fondoDos cont__formulario"> 
 			<div>
-				<img src="assets/movment.png" alt="uvita">
+				<img src="assets/movment.png" alt="uva en movimiento">
 			</div>
 			<div>
 				<div>
@@ -171,5 +177,12 @@
 		<iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13379.204439072955!2d-68.916136!3d-33.03537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31d6e1f51af10094!2sBodega%20Vistalba!5e0!3m2!1ses!2sar!4v1636061941426!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 	</div> 
 	
+	<!-- Js para wow y bootstrap -->
+
+	<script src="js/wow.js"></script>
+	<script>
+	new WOW().init();
+	</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
