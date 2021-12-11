@@ -51,7 +51,7 @@ html{
 }
 
 .button:hover{  /* Utilidades */
-    padding: .8rem 4.8rem;
+    padding: .8rem 4.8rem;  
 }
 
 .main__vinos .cont__img{ /* Utilidades */
@@ -71,7 +71,7 @@ html{
 
 
 /* --- HEADER HOME ---  */
-
+  
     /* BOOTSTRAP */
 
     .mt-5 {
@@ -97,6 +97,9 @@ html{
 .fondoDos{
     background-color: #DFD8CA;
 }
+.fondoTres{
+    background-color: #533535;
+}
 
 
 /* TEXTO / BOTON */
@@ -119,7 +122,6 @@ html{
 /* --- FOOTER --- */
 
 .footer{
-    background-color: #533535;
     height: 400px;
 }
 
@@ -317,11 +319,6 @@ html{
 
 /* ----------------------   SECCION BODEGA  --------------------------*/
 
-/* .conImgBod{
-    background: url(../assets/bodegafinal.jpg) no-repeat center fixed;
-    height: 100vh;
-} */
-
 .espacio__texto{
     line-height: 2.5rem;
     padding: 1rem;
@@ -415,7 +412,7 @@ html{
     .main__vinos .grilla{
         display: grid;
         grid-template-columns: 1fr;
-        margin-top: 241px;
+        margin-top: 11rem;
     }
     .main__vinos .cont__img a{ /* Utilidades */
         top: 50%;
@@ -581,7 +578,7 @@ html{
 
 @media all and (max-width: 481px){
     .main__vinos .grilla{
-        margin-top: 23rem;
+        margin-top: 11rem;
     }
     .header .nav{
         display: flex;
