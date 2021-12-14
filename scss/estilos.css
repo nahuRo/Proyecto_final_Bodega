@@ -30,9 +30,9 @@ html {
 }
 
 .containerMio .cont__text span {
-  /*HAY QUE AJUSTAR A TAMAÑOS MENORES A 302px MAS O MENOS*/
   display: block;
   font-size: 4.5rem;
+  /*PARA TAMAÑOS MENORES A 302px HAY QUE AJUSTAR ESTE FONT-SIZE*/
   margin: 0.5rem 0 5rem 0;
 }
 
@@ -66,15 +66,20 @@ html {
   }
 }
 
-.sectionMobile {
-  /* Utilidad */
+/*por el memomento estas clases casi que son identicas , lo voy a cambiar con if */
+.SecCombinada {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 @media all and (max-width: 576px) {
-  .sectionMobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .SecCombinada {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -82,15 +87,18 @@ html {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 
 .cont__text {
   /* Utilidad */
   width: 40%;
+}
+
+@media all and (max-width: 576px) {
+  .cont__text {
+    width: 85%;
+  }
 }
 
 .titulo {
@@ -116,7 +124,7 @@ html {
   /* Utilidad */
   background: -webkit-gradient(linear, left top, right top, from(#ff512f), to(#dd2476));
   background: linear-gradient(to right, #ff512f, #dd2476);
-  color: #ffffff;
+  color: #fff;
   padding: .8rem 2.4rem;
   border-radius: 15px;
   -webkit-transition: all 200ms;
@@ -128,33 +136,6 @@ html {
   padding: .8rem 4.8rem;
 }
 
-.main__vinos .cont__img {
-  /* Utilidad */
-  width: 100%;
-  position: relative;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.main__vinos .cont__img a {
-  /* Utilidad */
-  position: absolute;
-  left: 50%;
-  top: 80%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 2rem;
-  text-align: center;
-}
-
-.cont__t {
-  /* Utilidad */
-  width: 85%;
-  text-align: center;
-}
-
-/* ----------------------   SECCION INDEX  --------------------------*/
-/* --- HEADER HOME ---  */
 nav {
   background-color: #533535;
 }
@@ -174,63 +155,6 @@ nav {
      object-fit: cover;
 }
 
-/* --- MAIN ---  */
-.margin__right {
-  margin: 0 5% 0 0;
-}
-
-/* TEXTO / BOTON */
-.main > div {
-  /*ESTE PUEDE SER UNA FUNCION (MIXIN) */
-}
-
-.main > div:nth-child(odd) {
-  background-color: #E6CCA9;
-}
-
-.main > div:nth-child(even) {
-  background-color: #DFD8CA;
-}
-
-.main .cont__text .cont__btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.main .cont__text p {
-  margin: 3.2rem 0;
-}
-
-@media all and (max-width: 576px) {
-  .main .cont__text {
-    width: 85%;
-  }
-}
-
-.main .cont__img img {
-  width: 50rem;
-  border-radius: 2rem;
-}
-
-@media all and (max-width: 992px) {
-  .main .cont__img img {
-    width: 35rem;
-    border-radius: 10px;
-  }
-}
-
-@media all and (max-width: 576px) {
-  .main .cont__img img {
-    margin-left: 25%;
-    width: 50%;
-    border-radius: 10px;
-  }
-}
-
 /* --- FOOTER --- */
 .footer {
   height: 400px;
@@ -238,9 +162,15 @@ nav {
 }
 
 .footer .cont__redes {
-  font-size: 70px;
+  font-size: 7rem;
   text-align: center;
   width: 45rem;
+}
+
+@media all and (max-width: 576px) {
+  .footer .cont__redes {
+    font-size: 6.4rem;
+  }
 }
 
 .footer .cont__redes .cont__redesIconos {
@@ -266,12 +196,6 @@ nav {
   }
 }
 
-@media all and (max-width: 576px) {
-  .footer .cont__redes {
-    font-size: 6.4rem;
-  }
-}
-
 .footer .mapa {
   width: 50%;
   height: 90%;
@@ -284,32 +208,74 @@ nav {
   }
 }
 
-/* ----------------------   SECCION VINOS  --------------------------*/
-.main__vinos > div {
+/* ----------------------   SECCION INDEX  --------------------------*/
+.main-h > div {
   /*ESTE PUEDE SER UNA FUNCION (MIXIN) */
 }
 
-.main__vinos > div:nth-child(odd) {
+.main-h > div:nth-child(odd) {
   background-color: #E6CCA9;
 }
 
-.main__vinos > div:nth-child(even) {
+.main-h > div:nth-child(even) {
   background-color: #DFD8CA;
 }
 
-.main__vinos .grilla {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+.main-h .cont__text .cont__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.main__vinos .grilla div {
-  border: #ccc 1px solid;
+.main-h .cont__text p {
+  margin: 3.2rem 0;
+}
+
+.main-h img {
+  width: 50rem;
+  border-radius: 2rem;
+}
+
+@media all and (max-width: 992px) {
+  .main-h img {
+    width: 35rem;
+    border-radius: 10px;
+  }
 }
 
 @media all and (max-width: 576px) {
-  .main__vinos .grilla {
+  .main-h img {
+    margin-left: 25%;
+    width: 50%;
+    border-radius: 10px;
+  }
+}
+
+/* ----------------------   SECCION VINOS  --------------------------*/
+.main-v > div {
+  /*ESTE PUEDE SER UNA FUNCION (MIXIN) */
+}
+
+.main-v > div:nth-child(odd) {
+  background-color: #E6CCA9;
+}
+
+.main-v > div:nth-child(even) {
+  background-color: #DFD8CA;
+}
+
+.main-v .grilla {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+@media all and (max-width: 576px) {
+  .main-v .grilla {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -318,54 +284,65 @@ nav {
   }
 }
 
-.main__vinos .cont__img.img1 {
+.main-v .grilla div {
+  border: #DFD8CA 1px solid;
+}
+
+.main-v .cont__img {
+  width: 100%;
+  position: relative;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.main-v .cont__img.img1 {
   background: url(../assets/primera.jpg) no-repeat center;
 }
 
-@media all and (max-width: 576px) {
-  .main__vinos .cont__img.img1 a {
-    top: 50%;
-  }
-}
-
-.main__vinos .cont__img.img2 {
+.main-v .cont__img.img2 {
   background: url(../assets/segunda.jpg) no-repeat center;
 }
 
-@media all and (max-width: 576px) {
-  .main__vinos .cont__img.img2 a {
-    top: 50%;
-  }
-}
-
-.main__vinos .cont__img.img3 {
+.main-v .cont__img.img3 {
   background: url(../assets/tercera.jpg) no-repeat center;
 }
 
-@media all and (max-width: 576px) {
-  .main__vinos .cont__img.img3 a {
-    top: 50%;
-  }
-}
-
-.main__vinos .cont__img.img4 {
+.main-v .cont__img.img4 {
   background: url(../assets/cuarta.jpg) no-repeat center;
 }
 
+.main-v .cont__img a {
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 2rem;
+  text-align: center;
+}
+
 @media all and (max-width: 576px) {
-  .main__vinos .cont__img.img4 a {
+  .main-v .cont__img a {
     top: 50%;
   }
 }
 
-.main__vinos .sectionfila {
+.main-v .sectionfila {
+  /*PISO EL direccion DE LA CLASE SECTION , LO ARRREGLARE CON MIXIN Y CONDICIONAL*/
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
 }
 
-.main__vinos .sectionfila img {
+@media all and (max-width: 576px) {
+  .main-v .sectionfila {
+    /*SOLUCION A QUE ME ORILLA EL CONTENIDO A LA IZQUIERDA EN DESKTOP O MOBILE CUANDO US0 % , CREO UNA MEDIA PARA LA SOLUCION*/
+    width: 100%;
+  }
+}
+
+.main-v .sectionfila img {
   width: 100%;
 }
 
@@ -405,6 +382,8 @@ nav {
 
 .main-t .cont__tarjetas .section__t {
   position: relative;
+  width: 85%;
+  text-align: center;
 }
 
 .main-t .cont__tarjetas .section__t .separador {
@@ -550,23 +529,23 @@ nav {
 
 .main-t .cont__formulario .cont__form form div .input:hover {
   background-color: #533535;
-  color: #ffffff;
+  color: #fff;
 }
 
 .main-t .cont__formulario .cont__form form div .input:hover::-webkit-input-placeholder {
-  color: #ffffff;
+  color: #fff;
 }
 
 .main-t .cont__formulario .cont__form form div .input:hover:-ms-input-placeholder {
-  color: #ffffff;
+  color: #fff;
 }
 
 .main-t .cont__formulario .cont__form form div .input:hover::-ms-input-placeholder {
-  color: #ffffff;
+  color: #fff;
 }
 
 .main-t .cont__formulario .cont__form form div .input:hover::placeholder {
-  color: #ffffff;
+  color: #fff;
 }
 
 .main-t .cont__formulario .cont__form form div textarea {
@@ -784,7 +763,7 @@ nav {
 }
 
 .main-b .centrado .cont__img__bodega p {
-  color: #ffffff;
+  color: #fff;
   font-size: 2rem;
   margin-left: 62rem;
   padding: 0 7rem 0 0;
