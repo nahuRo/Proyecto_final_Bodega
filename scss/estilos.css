@@ -66,7 +66,7 @@ html {
   }
 }
 
-/*por el memomento estas clases casi que son identicas , lo voy a cambiar con if */
+/*por el momento estas clases casi que son identicas , lo voy a cambiar con if */
 .SecCombinada {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -380,9 +380,40 @@ nav {
           justify-content: end;
 }
 
+@media all and (max-width: 576px) {
+  .main-t .cont__tarjetas {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "uno" "dos" "tres" "cuatro" "cinco" "seis" "siete" "ocho" "nueve" "diez" "once" "doce";
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-t .cont__tarjetas .tres {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: tres;
+  }
+  .main-t .cont__tarjetas .ocho {
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: siete;
+  }
+  .main-t .cont__tarjetas .doce {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+    grid-area: once;
+  }
+}
+
 .main-t .cont__tarjetas .section__t {
-  position: relative;
   width: 85%;
+  position: relative;
   text-align: center;
 }
 
@@ -398,6 +429,7 @@ nav {
 @media all and (max-width: 576px) {
   .main-t .cont__tarjetas .section__t .separador {
     display: none;
+    /*NO QUIERO PONERLE EL SEPARADOR EN MOBILE*/
   }
 }
 
@@ -407,8 +439,8 @@ nav {
 }
 
 .main-t .cont__tarjetas .cont__img__gen img {
-  width: 50vw;
-  height: 50vh;
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -417,15 +449,6 @@ nav {
   .main-t .cont__tarjetas .cont__img__gen img {
     width: 100vw;
     height: 63rem;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-}
-
-@media all and (max-width: 576px) {
-  .main-t .cont__tarjetas .cont__img__gen {
-    width: 100%;
-    height: 100%;
   }
 }
 
@@ -436,8 +459,29 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+@media all and (max-width: 576px) {
+  .main-t .cont__formulario {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.main-t .cont__formulario > div {
+  /*SIEMPRE DARLE UN ANCHO A LOS CONTENDORES DIRECTOS DE LO QUE YO QUIERO MOVER , O SEA SUS HIJOS DIRECTOS*/
+  width: 40%;
+}
+
+@media all and (max-width: 576px) {
+  .main-t .cont__formulario > div {
+    width: 80%;
+  }
 }
 
 .main-t .cont__formulario img {
@@ -448,10 +492,9 @@ nav {
 
 @media all and (max-width: 576px) {
   .main-t .cont__formulario img {
-    width: 70%;
+    width: 100%;
     position: relative;
-    left: 11rem;
-    top: 2.5rem;
+    top: 3rem;
   }
 }
 
@@ -485,35 +528,19 @@ nav {
   }
 }
 
-@media all and (max-width: 576px) {
-  .main-t .cont__formulario {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-  }
-}
-
-.main-t .cont__formulario .cont__form {
-  width: 100%;
-}
-
 .main-t .cont__formulario .cont__form form {
   border: 2px brown solid;
   border-radius: 5px;
-  width: 55rem;
-  height: 50rem;
+  margin-bottom: 10rem;
   padding: 2rem 2rem;
+}
+
+@media all and (max-width: 576px) {
+  .main-t .cont__formulario .cont__form form {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+  }
 }
 
 .main-t .cont__formulario .cont__form form div {
@@ -554,15 +581,6 @@ nav {
   max-height: 15rem;
   max-width: 100%;
   min-width: 100%;
-}
-
-@media all and (max-width: 576px) {
-  .main-t .cont__formulario .cont__form form {
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-    margin-bottom: 10rem;
-  }
 }
 
 /* ----------------------   SECCION RESTAURANTE  --------------------------*/
