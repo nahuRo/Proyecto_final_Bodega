@@ -105,7 +105,7 @@ html {
   /* Utilidad */
   text-align: center;
   font-size: 4rem;
-  margin: 4.5rem 0;
+  margin-bottom: 4.5rem;
 }
 
 @media all and (max-width: 576px) {
@@ -328,7 +328,7 @@ nav {
 }
 
 .main-v .sectionfila {
-  /*PISO EL direccion DE LA CLASE SECTION , LO ARRREGLARE CON MIXIN Y CONDICIONAL*/
+  /*PISO EL flex-direccion DE LA CLASE SECTION , LO ARRREGLARE CON MIXIN Y CONDICIONAL*/
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -452,7 +452,7 @@ nav {
   }
 }
 
-.main-t .cont__formulario {
+.main-t .section_Modify {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -462,121 +462,106 @@ nav {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  height: 80vh;
 }
 
 @media all and (max-width: 576px) {
-  .main-t .cont__formulario {
+  .main-t .section_Modify {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: 90vh;
   }
 }
 
-.main-t .cont__formulario > div {
-  /*SIEMPRE DARLE UN ANCHO A LOS CONTENDORES DIRECTOS DE LO QUE YO QUIERO MOVER , O SEA SUS HIJOS DIRECTOS*/
+.main-t .section_Modify > div {
+  /*SIEMPRE DARLE UN ANCHO A LOS CONTENDORES DIRECTOS DE LO QUE YO QUIERO MOVER , O SEA MOVER A SUS HIJOS DIRECTOS*/
   width: 40%;
 }
 
 @media all and (max-width: 576px) {
-  .main-t .cont__formulario > div {
+  .main-t .section_Modify > div {
     width: 80%;
   }
 }
 
-.main-t .cont__formulario img {
+.main-t .section_Modify img {
   -webkit-animation: move_img 5s ease-in-out infinite forwards;
           animation: move_img 5s ease-in-out infinite forwards;
-  width: 90%;
-}
-
-@media all and (max-width: 576px) {
-  .main-t .cont__formulario img {
-    width: 100%;
-    position: relative;
-    top: 3rem;
-  }
+  width: 100%;
 }
 
 @-webkit-keyframes move_img {
   0% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   50% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   100% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
 @keyframes move_img {
   0% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
   50% {
-    -webkit-transform: translateY(-15px);
-            transform: translateY(-15px);
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
   }
   100% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
   }
 }
 
-.main-t .cont__formulario .cont__form form {
+.main-t .section_Modify .cont__formulario form {
   border: 2px brown solid;
   border-radius: 5px;
-  margin-bottom: 10rem;
-  padding: 2rem 2rem;
+  padding: 2rem;
 }
 
-@media all and (max-width: 576px) {
-  .main-t .cont__formulario .cont__form form {
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-  }
-}
-
-.main-t .cont__formulario .cont__form form div {
+.main-t .section_Modify .cont__formulario form div {
   margin: 1rem 0;
 }
 
-.main-t .cont__formulario .cont__form form div .input {
+.main-t .section_Modify .cont__formulario form div .input {
   width: 100%;
   height: 4rem;
   cursor: pointer;
-  border: 2px #000 solid;
+  border: none;
 }
 
-.main-t .cont__formulario .cont__form form div .input:hover {
+.main-t .section_Modify .cont__formulario form div .input:hover {
   background-color: #533535;
   color: #fff;
 }
 
-.main-t .cont__formulario .cont__form form div .input:hover::-webkit-input-placeholder {
+.main-t .section_Modify .cont__formulario form div .input:hover::-webkit-input-placeholder {
   color: #fff;
 }
 
-.main-t .cont__formulario .cont__form form div .input:hover:-ms-input-placeholder {
+.main-t .section_Modify .cont__formulario form div .input:hover:-ms-input-placeholder {
   color: #fff;
 }
 
-.main-t .cont__formulario .cont__form form div .input:hover::-ms-input-placeholder {
+.main-t .section_Modify .cont__formulario form div .input:hover::-ms-input-placeholder {
   color: #fff;
 }
 
-.main-t .cont__formulario .cont__form form div .input:hover::placeholder {
+.main-t .section_Modify .cont__formulario form div .input:hover::placeholder {
   color: #fff;
 }
 
-.main-t .cont__formulario .cont__form form div textarea {
-  border: 2px #000 solid;
+.main-t .section_Modify .cont__formulario form div textarea {
+  border: none;
   min-height: 15rem;
   max-height: 15rem;
   max-width: 100%;
@@ -612,23 +597,27 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 60vh;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   background-color: #DFD8CA;
-}
-
-.main-r .TableRest .contenidoTableRest {
-  margin-top: 9rem;
+  height: 60vh;
 }
 
 @media all and (max-width: 576px) {
-  .main-r .TableRest .contenidoTableRest {
-    margin-top: 0rem;
+  .main-r .TableRest {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    height: 75vh;
   }
 }
 
@@ -644,55 +633,14 @@ nav {
   }
 }
 
-.main-r .TableRest .menuRest table {
-  border-spacing: 2.2rem;
+.main-r .TableRest table {
   margin-top: -8rem;
+  width: 100%;
 }
 
 @media all and (max-width: 576px) {
-  .main-r .TableRest .menuRest table {
-    border-spacing: 2.2rem;
+  .main-r .TableRest table {
     margin-top: 0rem;
-  }
-}
-
-@media all and (max-width: 576px) {
-  .main-r .TableRest {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 0%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
-  }
-}
-
-@media all and (max-width: 576px) {
-  .main-r .reverseMobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    height: 0%;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -ms-flex-wrap: nowrap;
-        flex-wrap: nowrap;
   }
 }
 

@@ -84,7 +84,8 @@ html{
 .titulo{ /* Utilidad */
     text-align: center;
     font-size: 4rem;
-    margin: 4.5rem 0;
+    // margin: 4.5rem 0;
+    margin-bottom: 4.5rem;
     @media all and (max-width: $break-medio){
         text-align: center;
         font-size: 4rem;
@@ -271,7 +272,7 @@ nav{
         }
     }
     
-    .sectionfila{ /*PISO EL direccion DE LA CLASE SECTION , LO ARRREGLARE CON MIXIN Y CONDICIONAL*/
+    .sectionfila{ /*PISO EL flex-direccion DE LA CLASE SECTION , LO ARRREGLARE CON MIXIN Y CONDICIONAL*/
         flex-direction: row;
         @media all and (max-width: $break-medio){ /*SOLUCION A QUE ME ORILLA EL CONTENIDO A LA IZQUIERDA EN DESKTOP O MOBILE CUANDO US0 % , CREO UNA MEDIA PARA LA SOLUCION*/
             width: 100%; 
@@ -367,16 +368,17 @@ nav{
     
     /* formulario */
     
-    .cont__formulario{
+    .section_Modify{
         display: flex;
         align-items: center;
         justify-content: space-evenly;
-
+        height: 80vh;
         @media all and (max-width: $break-medio){
             flex-direction: column;
+            height: 90vh;
         }
 
-        & > div{  /*SIEMPRE DARLE UN ANCHO A LOS CONTENDORES DIRECTOS DE LO QUE YO QUIERO MOVER , O SEA SUS HIJOS DIRECTOS*/
+        & > div{  /*SIEMPRE DARLE UN ANCHO A LOS CONTENDORES DIRECTOS DE LO QUE YO QUIERO MOVER , O SEA MOVER A SUS HIJOS DIRECTOS*/
             width: 40%;
             @media all and (max-width: $break-medio){
                 width: 80%;
@@ -385,44 +387,33 @@ nav{
 
         img{
             animation: move_img 5s ease-in-out infinite forwards;
-            width: 90%;
-            @media all and (max-width: $break-medio){
-                width: 100%;
-                position: relative;
-                top: 3rem;
-            }
+            width: 100%;
             @keyframes move_img {
                 0%{
-                    transform: translateY(15px);
+                    transform: translateY(10px);
                 }
                 50%{
-                    transform: translateY(-15px);
+                    transform: translateY(-10px);
                 }
                 100%{
-                    transform: translateY(15px);
+                    transform: translateY(10px);
                 }
             }
         }
         
-        .cont__form{
+        .cont__formulario{
             
             form{
                 border: 2px brown solid;
                 border-radius: 5px;
-                margin-bottom: 10rem;
-                padding: 2rem 2rem;
-                @media all and (max-width: $break-medio){
-                    width: 100%;
-                    height: 100%;
-                    padding: 2rem;
-                }
+                padding: 2rem;
                 div{
                     margin: 1rem 0;
                     .input{
                         width: 100%;
                         height: 4rem;
                         cursor: pointer;
-                        border: 2px #000 solid;
+                        border: none;
                         &:hover{
                             background-color: $color-tres;
                             &::placeholder{
@@ -432,7 +423,7 @@ nav{
                         }
                     }
                     textarea{
-                        border: 2px #000 solid;
+                        border: none;
                         min-height: 15rem;
                         max-height: 15rem;
                         max-width: 100%;
@@ -442,49 +433,51 @@ nav{
             }
         }
     }
-
+    
 }
 
 
 /* ----------------------   SECCION RESTAURANTE  --------------------------*/
 
 .main-r{
-
+    
+    /* CLASE PARA ACOMODAR EN MOBILE */
+    
+    
     .contImgRest-1{
         background: url(../assets/fondoRest.jpg) no-repeat center fixed;
         height: 100vh;
     }
-
+    
     .contImgRest-2{
         background: url(../assets/imgrest2.jpg) no-repeat center fixed;
         height: 100vh;
     }
-
+    
     .contImgRest-3{
         background: url(../assets/imgrest3.jpg) no-repeat center fixed;
         height: 100vh;
     }
-
+    
     .contImgRest-4{
         background: url(../assets/imgrest4.jpg) no-repeat center fixed;
         height: 100vh;
     }
-
+   
     .TableRest{
         display: flex;
-        height: 60vh;
-        justify-content: space-around;
-        align-content: center;
+        justify-content: space-evenly;
+        align-items: center;
         flex-wrap: wrap;
         background-color: $color-dos;
-        
-        .contenidoTableRest{
-            margin-top: 9rem;
-            @media all and (max-width: $break-medio){
-                margin-top: 0rem;
-            }
+        height: 60vh;
+
+        @media all and (max-width: $break-medio){
+            flex-direction: column-reverse;
+            flex-wrap: nowrap;
+            height: 75vh;
         }
-    
+
         .menuRest{
             position: relative;
             top: 2rem;
@@ -492,38 +485,18 @@ nav{
             @media all and (max-width: $break-medio){
                 display: none;
             }
-    
-            table{
-                border-spacing: 2.2rem;
-                margin-top: -8rem;
-                @media all and (max-width: $break-medio){
-                    border-spacing: 2.2rem;
-                    margin-top: 0rem;
-                }
+        }
+
+        table{
+            margin-top: -8rem;
+            width: 100%;
+            @media all and (max-width: $break-medio){
+                margin-top: 0rem;
             }
         }
     
-        @media all and (max-width: $break-medio){
-            display: flex;
-            flex-direction: column;
-            height: 0%;
-            justify-content: space-evenly;
-            align-content: center;
-            flex-wrap: nowrap;
-        }
     } 
 
-    /* CLASE PARA ACOMODAR EN MOBILE */
-    .reverseMobile{ 
-        @media all and (max-width: $break-medio){
-            display: flex;
-            flex-direction: column-reverse;
-            height: 0%;
-            justify-content: space-evenly;
-            align-content: center;
-            flex-wrap: nowrap;
-        }
-    }
 }
 
 /* ----------------------   SECCION BODEGA  --------------------------*/
