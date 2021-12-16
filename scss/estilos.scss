@@ -147,17 +147,17 @@ nav{
         @media all and (max-width: $break-medio){   
             font-size: 6.4rem;
         }
-        .cont__redesIconos{
-            display: flex;
-            justify-content: space-evenly;
-        }
-        a{
-            color: $color-uno;
-        }
         p{
             margin: 3.2rem 0;
             @media all and (max-width: $break-medio){   
                 margin: 1.6rem 0;
+            }
+        }
+        .cont__redesIconos{
+            display: flex;
+            justify-content: space-evenly;
+            a{
+                color: $color-uno;
             }
         }
     }
@@ -318,7 +318,8 @@ nav{
             "doce";
             justify-items: center;
             align-items: center;
-           
+
+           /*FLOR EN ESTOS grid-area DE ACA ABAJO , AL COMILARLO CON SASS ME DICE QUE FALTAN DECLARAR LOS OTROS grid-area , PERO NO LOS DECLARE PORQUE NO ME HACEN FALTA , SOLO ME FALTABAN LOS 3 QUE DECLARE */
             .tres{
                 grid-area: tres;
             }
