@@ -1,146 +1,218 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="vinos , turismo en bodega , restaurante y historia de nuestra bodega">
+	<meta name="keywords" content="vinos,turismo,restaurante,bodega,historia,finca,viñedo,amigos.almuerzo">
+
 	<script src="https://kit.fontawesome.com/ef997cdb75.js" crossorigin="anonymous"></script> 
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="shortcut icon" href="asset/favicon.ico" type="image/x-icon">
 
-	<title>Bodega</title>
-	<link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+	<title> Filgo </title>
 </head>
 <body>
+    <header>
 
-	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
-		<div class="container-fluid">
-			<a class="navbar-brand" href="index.html">
-				<img src="assets/logo.svg" alt="logo filgo" width="100" height="60">
-			</a>
-			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!--PARA BOTON HAMBURGUESA-->
-				<span class="navbar-toggler-icon"></span>
-			</button>
-			<div class="collapse navbar-collapse" id="navbarNav">
-				<ul class="navbar-nav negrita">
-					<li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-					<li class="nav-item"><a class="nav-link" href="vinos.html">Vinos</a></li>
-					<li class="nav-item"><a class="nav-link" href="turismo.html">Turismo</a></li>
-					<li class="nav-item"><a class="nav-link" href="restaurante.html">Restaurante</a></li>
-					<li class="nav-item"><a class="nav-link" href="bodega.html">Bodega</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
+        <div class="container-fluid p-0">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html">
+                        <img src="asset/logo.svg" alt="logo filgo" width="80" height="80">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!--PARA BOTON HAMBURGUESA-->
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav negrita">
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="vinos.html">Vinos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="turismo.html">Turismo</a></li>
+                            <li class="nav-item"><a class="nav-link" href="restaurante.html">Restaurante</a></li>
+                            <li class="nav-item"><a class="nav-link" href="bodega.html">Bodega</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
 
-	<div class="container-fluid p-0 mt-5">
-		<div id="carouselUno" class="carousel slide" data-bs-ride="carousel">
-			<div class="carousel-inner">
-			<div class="carousel-item active">
-				<img src="assets/bodegita.jpg" class="d-block h-100 w-100" alt="bodega">
-			</div>
-			<div class="carousel-item">
-				<img src="assets/viñedo.jpg" class="d-block h-100 w-100"  alt="viñedo">
-			</div>
-			<div class="carousel-item">
-				<img src="assets/carrCuatro.jpg" class="d-block h-100 w-100" alt="uva">
-			</div>
-			<div class="carousel-item">
-				<img src="assets/vista2.jpg" class="d-block h-100 w-100" alt="bodega">
-			</div>
-			</div>
-			<button class="carousel-control-prev" type="button" data-bs-target="#carouselUno" data-bs-slide="prev">
-			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Previous</span>
-			</button>
-			<button class="carousel-control-next" type="button" data-bs-target="#carouselUno" data-bs-slide="next">
-			<span class="carousel-control-next-icon" aria-hidden="true"></span>
-			<span class="visually-hidden">Next</span>
-			</button>
-		</div>
-	</div>
+    </header>
 
-	<div class="main-h margin "> <!-- MAIN - INDEX -->
+    <main id="m-index">
 
-		<div class="containerMio section"> <!-- VINOS (INTRO)  -->
-			<div class="cont__text">
-				<p class="titulo negrita">NUESTROS VINOS</p>
-				<p>Elaboramos vinos de alta gama a partir de las uvas cosechadas en nuestra finca Emblema, situada en Agrelo, y en las mejores zonas del Valle de Uco en la provincia de Mendoza.</p>
-				<p class="negrita">Calidad, innovación, trayectoria heredada de la familia Raventós Codorníu, y un profundo respeto por el terruño son los pilares que nos consolidan como hacedores de grandes vinos</p>
-				<p>Nuestros vinos son novedosos y genuinos representantes de nuestra tierra.Somos creativos respetando nuestra historia y herencia de productores de vinos de calidad.Hacemos vinos modernos, sobrios, auténticos, nobles, con una alta calidad sostenida en el tiempo y sentido de terruño.</p>
-				<div class="cont__btn">
-					<a class="button"  href="vinos.html">Ver más</a>
-				</div>
-			</div>
-			<div class="cont__img"> 
-				<img class="wow animate__animated animate__fadeInRight" src="assets/wine.jpg" alt="vino">
-			</div>
-		</div>
+        <section>
+            <div class="container-fluid p-0">
+                <div id="carouselUno" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="asset/carrM_uno_uno.jpg">
+                                <img src="asset/carr_uno_uno.jpg" alt="bodega" class="w-100">
+                            </picture>
+                        </div>
+                        <div class="carousel-item">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="asset/carrM_uno_dos.jpg">
+                                <img src="asset/carr_uno_dos.jpg" alt="viñedo" class="w-100">
+                            </picture>
+                        </div>
+                        <div class="carousel-item">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="asset/carrM_uno_tres.jpg">
+                                <img src="asset/carr_uno_tres.jpg" alt="uva" class="w-100">
+                            </picture>
+                        </div>
+                        <div class="carousel-item">
+                            <picture>
+                                <source media="(max-width: 768px)" srcset="asset/carrM_uno_cuatro.jpg">
+                                <img src="asset/carr_uno_cuatro.jpg" alt="bodega" class="w-100">
+                            </picture>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselUno" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselUno" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
 
-		<div class="containerMio SecCombinada"> <!-- TURISMO (INTRO) -->
-			<div class="cont__img">
-				<img class="wow animate__animated  animate__fadeInLeft" src="assets/turismo.jpg" alt="grupo de amigos">
-			</div>
-			<div class="cont__text">
-				<p class="titulo negrita">TURISMO</p>
-				<p>Tanto para descubrir los vinos de nuestro viñedo único y la particular bodega de nivel internacional, o para disfrutar del almuerzo en el restaurante o participar de nuestros eventos exclusivos, cada visitante disfruta de una experiencia sublime en Finca Filgo.</p>
-				<p>Con la Cordillera de los Andes como telón de fondo, la tranquilidad de la viña y la imponente arquitectura de Finca Filgo, es poco sorprendente para quienes nos han visitado, que Finca Filgo fue galardonado con el trofeo al ‘Mejor Paisaje y Arquitectura’ en el concurso de los Grandes Capitales del Vino en 2009.</p>
-				<div class="cont__btn">
-					<a class="button"  href="turismo.html">Ver más</a>
-				</div>
-			</div>
-		</div>
-		
-		<div class="containerMio section"> <!-- RESTAURANTE (INTRO) -->
-			<div class="cont__text">
-				<p class="titulo negrita">RESTAURANTE</p>
-				<p>Ya sea que se trate de un almuerzo íntimo para dos, en familia o con un grupo de amigos, Finca Filgo ofrece ingredientes locales de calidad para lograr una creativa experiencia gastronómica en un ambiente relajado con la vista panorámica de la cordillera de los Andes.</p>
-				<p>El enfoque de alta calidad de Finca Filgo trasciende a la excelente cocina de nuestro restaurante. El menú de temporada de Finca Filgo combina ingredientes locales para crear platos creativos que maridan a la perfección con nuestros vinos.</p>
-				<div class="cont__btn">
-					<a class="button"  href="restaurante.html">Ver más</a>
-				</div>
-			</div>
-			<div class="cont__img">
-				<img class="wow animate__animated animate__fadeInRight" src="assets/fooHome.jpg" alt="palto de comida">
-			</div>
-		</div>
+        <section>
+            <div class="container-fluid d-flex justify-content-evenly align-items-center flex-wrap p-0">
+                <div class="col-12 col-md-6">
+                    <div class="cont-text">
+                        <h2 class="mb-xxl-4 text-center">NUESTROS VINOS</h2>
+                        <p>Elaboramos vinos de alta gama a partir de las uvas cosechadas en nuestra finca Emblema, situada en Agrelo, y en las mejores zonas del Valle de Uco en la provincia de Mendoza.</p>
+                        <p>Calidad, innovación, trayectoria heredada de la familia Raventós Codorníu, y un profundo respeto por el terruño son los pilares que nos consolidan como hacedores de grandes vinos</p>
+                        <p>Nuestros vinos son novedosos y genuinos representantes de nuestra tierra.Somos creativos respetando nuestra historia y herencia de productores de vinos de calidad.Hacemos vinos modernos, sobrios, auténticos, nobles, con una alta calidad sostenida en el tiempo y sentido de terruño.</p>
+                        <div class="d-flex justify-content-center mt-xxl-5">
+                            <a href="vinos.html">
+                                <button type="button" class="btn btn-primary">Ver más</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6"> 
+                    <div class="cont-img">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="asset/copaM.jpg" >
+                            <img src="asset/copa.jpg" alt="copa de vino" class="wow animate__animated  animate__fadeInRight">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-		<div class="containerMio SecCombinada"> <!-- BODEGA (INTRO) -->
-			<div class="cont__img"> 
-				<img class="wow animate__animated  animate__fadeInLeft" src="assets/bodega.jpg" alt="barricas">
-			</div>
-			<div class="cont__text"> 
-				<p class="titulo negrita">NUESTROS HISTORIA</p>
-				<p>Un entorno de un ecosistema privilegiado. Nuestra bodega está integrada a la montaña con sus pulsaciones y la vida que late en medio de la quietud.</p>
-				<p>El edificio de piedra inmerso en la precordillera y su viñedo conforman un oasis en un auténtico desierto de altura. Su arquitectura reúne los materiales nobles de la Cordillera de los Andes -rocas, canto rodado, granza, arena y limo- logrando una perfecta armonía con el paisaje. Una bodega-montaña integrada a los Andes.</p>
-				<p class="negrita">Nuestros vinos encierran los latidos de los Andes, sus vibraciones que dan vida a un entorno natural único.</p>
-				<div class="cont__btn">
-					<a class="button"  href="bodega.html">Ver más</a>
-				</div>
-			</div>
-		</div>
+        <section>
+            <div class="container-fluid d-flex flex-row-reverse justify-content-evenly align-items-center flex-wrap p-0">
+                <div class="col-12 col-md-6">
+                    <div class="cont-text">
+                        <h2 class="mb-xxl-4 text-center">TURISMO</h2>
+                        <p>Tanto para descubrir los vinos de nuestro viñedo único y la particular bodega de nivel internacional, o para disfrutar del almuerzo en el restaurante o participar de nuestros eventos exclusivos, cada visitante disfruta de una experiencia sublime en Finca Filgo.</p>
+                        <p>Con la Cordillera de los Andes como telón de fondo, la tranquilidad de la viña y la imponente arquitectura de Finca Filgo, es poco sorprendente para quienes nos han visitado, que Finca Filgo fue galardonado con el trofeo al ‘Mejor Paisaje y Arquitectura’ en el concurso de los Grandes Capitales del Vino en 2009.</p>
+                        <div class="d-flex justify-content-center mt-xxl-5">
+                            <a href="turismo.html>
+                                <button type="button" class="btn btn-primary">Ver más</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="cont-img">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="asset/almuerzoM.jpg" >
+                            <img src="asset/almuerzo.jpg" alt="grupo de amigos" class="wow animate__animated  animate__fadeInLeft">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	</div>
+        <section>
+            <div class="container-fluid d-flex justify-content-evenly align-items-center flex-wrap p-0">
+                <div class="col-12 col-md-6">
+                    <div class="cont-text">
+                        <h2 class="mb-xxl-4 text-center">RESTAURANTE</h2>
+                        <p>Ya sea que se trate de un almuerzo íntimo para dos, en familia o con un grupo de amigos, Finca Filgo ofrece ingredientes locales de calidad para lograr una creativa experiencia gastronómica en un ambiente relajado con la vista panorámica de la cordillera de los Andes.</p>
+                        <p>El enfoque de alta calidad de Finca Filgo trasciende a la excelente cocina de nuestro restaurante. El menú de temporada de Finca Filgo combina ingredientes locales para crear platos creativos que maridan a la perfección con nuestros vinos.</p>
+                        <div class="d-flex justify-content-center mt-xxl-5">
+                            <a  href="restaurante.html">
+                                <button type="button" class="btn btn-primary">Ver más</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6"> 
+                    <div class="cont-img">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="asset/comM_uno.jpg" >
+                            <img src="asset/com_uno.jpg" alt="plato de comida" class="wow animate__animated  animate__fadeInRight">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<div class="footer SecCombinada"> <!-- FOOTER -->
-		<div class="cont__redes">
-			<p> © Filgo</p>
-			<div class="cont__redesIconos">
-				<a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-				<a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-				<a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-			</div>
-		</div>
-		<iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13379.204439072955!2d-68.916136!3d-33.03537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31d6e1f51af10094!2sBodega%20Vistalba!5e0!3m2!1ses!2sar!4v1636061941426!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>	
-	</div>
+        <section>
+            <div class="container-fluid d-flex flex-row-reverse justify-content-evenly align-items-center flex-wrap p-0">
+                <div class="col-12 col-md-6">
+                    <div class="cont-text">
+                        <h2 class="mb-xxl-4 text-center">NUESTROS HISTORIA</h2>
+                        <p>Un entorno de un ecosistema privilegiado. Nuestra bodega está integrada a la montaña con sus pulsaciones y la vida que late en medio de la quietud.</p>
+                        <p>El edificio de piedra inmerso en la precordillera y su viñedo conforman un oasis en un auténtico desierto de altura. Su arquitectura reúne los materiales nobles de la Cordillera de los Andes -rocas, canto rodado, granza, arena y limo- logrando una perfecta armonía con el paisaje. Una bodega-montaña integrada a los Andes.</p>
+                        <p>Nuestros vinos encierran los latidos de los Andes, sus vibraciones que dan vida a un entorno natural único.</p>
+                        <div class="d-flex justify-content-center mt-xxl-5">
+                            <a href="bodega.html">
+                                <button type="button" class="btn btn-primary">Ver más</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="cont-img">
+                        <picture>
+                            <source media="(max-width: 768px)" srcset="asset/barricaM.jpg" >
+                            <img src="asset/barrica.jpg" alt="barricas" class="wow animate__animated  animate__fadeInLeft">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<!-- Js para wow y bootstrap -->
+    </main>
 
-	<script src="js/wow.js"></script>
-	<script>
-	new WOW().init();
-	</script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <footer>
+        <div class="container-fluid d-flex justify-content-evenly align-items-center flex-wrap p-0">
+            <div class="col-12 col-md-6 d-flex justify-content-center">
+                <div class="w-50">
+                    <h2 class="text-center mb-5">© Filgo</h2>
+                    <div class="d-flex justify-content-between w-100">
+                        <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 d-flex justify-content-center">
+                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13379.204439072955!2d-68.916136!3d-33.03537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31d6e1f51af10094!2sBodega%20Vistalba!5e0!3m2!1ses!2sar!4v1636061941426!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Js para wow y bootstrap -->
+    <script src="js/wow.js"></script>
+    <script>
+    new WOW().init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 </body>
 </html>
