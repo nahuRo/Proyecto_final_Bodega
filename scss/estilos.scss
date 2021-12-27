@@ -25,41 +25,8 @@ $tamaños-fontW:(
     fw-mayor: 700
 );
 
-*{
-    margin: 0 ; padding: 0;
-    box-sizing: border-box
-}
-
-body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    
-    @media all and (max-width: 1130px) {
-        font-size: 14px; // usar clase de bootstrap
-    }
-    @media all and (max-width:475px) {
-        font-size: 12px; // usar clase de bootstrap
-    }
-}
-// %
-
-%borde{
-    border-radius: 20px;
-}
-
 // Mixin
-.cont-altura{
-    height: auto;
-    & > div{
-        padding: 5rem 0;
-    }
-    @media all and (max-width: 767px) {
-        & > div{
-            padding: 1.5rem 0;
-        }
-    }
-   
-}
+
 @mixin bg-colors {
     &:nth-child(odd){
         background-color: map-get($colores,c-uno);
@@ -84,6 +51,13 @@ body{
 @mixin sombra {
     box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);   
 }
+
+// %
+
+%borde{
+    border-radius: 20px;
+}
+
 // utilidad
 
 .cont-img{
@@ -93,9 +67,39 @@ body{
         @extend %borde;
         @include sombra;
     }
-}   
+} 
 
-// Header
+.cont-altura{
+    height: auto;
+    & > div{
+        padding: 5rem 0;
+    }
+    @media all and (max-width: 767px) {
+        & > div{
+            padding: 1.5rem 0;
+        }
+    }
+   
+}
+
+// General
+
+*{
+    margin: 0 ; padding: 0;
+    box-sizing: border-box
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    
+    @media all and (max-width: 1130px) {
+        font-size: 14px;
+    }
+    @media all and (max-width:475px) {
+        font-size: 12px;
+    }
+}
 
 nav{
     background-color: map-get($colores,c-dos);
@@ -142,8 +146,6 @@ nav{
         position: static;
     }
 }
-
-// Footer
 
 footer{
     background-color: map-get($colores,c-tres);
@@ -291,9 +293,7 @@ footer{
             }
         }
     }
-
 }
-
 
 // ------------ RESTAURANTE -------------
 
