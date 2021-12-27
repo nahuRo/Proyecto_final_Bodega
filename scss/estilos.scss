@@ -15,7 +15,8 @@ $colores:(
 $tamaños-media:(
     t-menor: 481px,
     t-medio: 576px,
-    t-mayor: 768px
+    t-mayor: 767px,
+    t-mmayor: 991px
 );
 
 $tamaños-fontW:(
@@ -31,24 +32,34 @@ $tamaños-fontW:(
 
 body{
     font-family: 'Roboto', sans-serif;
-}
-
-html{
-    font-size: 1rem;
-    @media all and (max-width: map-get($tamaños-media, t-menor )) {
-        font-size: .8rem;
-    }
+    font-size: 16px;
     
+    @media all and (max-width: 1130px) {
+        font-size: 14px; // usar clase de bootstrap
+    }
+    @media all and (max-width:475px) {
+        font-size: 12px; // usar clase de bootstrap
+    }
 }
-
 // %
 
-%altura{
-    height: 100vh;
+%borde{
+    border-radius: 20px;
 }
 
 // Mixin
-
+.cont-altura{
+    height: auto;
+    & > div{
+        padding: 5rem 0;
+    }
+    @media all and (max-width: 767px) {
+        & > div{
+            padding: 1.5rem 0;
+        }
+    }
+   
+}
 @mixin bg-colors {
     &:nth-child(odd){
         background-color: map-get($colores,c-uno);
@@ -59,48 +70,75 @@ html{
 }
 
 @mixin centrado-cajas {
-    width: 50%;
-    margin: 0 auto;
-    @media all and (max-width: map-get($tamaños-media, t-medio )) {
+    @media all and (max-width: map-get($tamaños-media, t-mayor )) {
         width: 65%;
     }
 }
 
 @mixin centrado-texto {
     width: 80%;
-    margin: 0 auto;
     @media all and (max-width: map-get($tamaños-media, t-medio )) {
         width: 90%;
     }
 }
+@mixin sombra {
+    box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);   
+}
+// utilidad
+
+.cont-img{
+    width: 50%;
+    @include centrado-cajas;
+    img{
+        @extend %borde;
+        @include sombra;
+    }
+}   
 
 // Header
 
 nav{
-    
-    @media all and (max-width: map-get($tamaños-media, t-mayor )) {
+    background-color: map-get($colores,c-dos);
+    @media all and (max-width: map-get($tamaños-media, t-mmayor)) {
         background-color: map-get($colores,c-dos);
     }
-    .navbar-nav{
+    .alt-nav{
+        height: auto;
+        @media all and (min-width: map-get($tamaños-media, t-mmayor)) {
+            height: 55px;
+        }
+    }
+    #navbarNav{
         a{
-            font-size: 1rem;    
+            font-size: 1rem;
             font-weight: map-get($tamaños-fontW, fw-medio);
-            margin-bottom: 0;
-            
+            position: relative;
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                bottom: 0;
+                left: 0;
+                background-color: #000;
+                transform: scaleX(0);
+                transform-origin: bottom right;
+                transition: transform 600ms ease-out ;
+            }
             &:hover{
-                border-bottom: 1px #000 solid;
-                @media all and (max-width: map-get($tamaños-media, t-mayor )) {
-                    border-bottom: none;
+                &::after{
+                    transform: scaleX(1);
+                    transform-origin: bottom left;
                 }
             }
         }
         .nav-link{
-            padding: 0;
+            padding-bottom: 0;
         }
     }
 }
 .fixed-top{
-    @media all and (max-width: map-get($tamaños-media, t-mayor )) {
+    @media all and (max-width: map-get($tamaños-media, t-mmayor)) {
         position: static;
     }
 }
@@ -109,61 +147,56 @@ nav{
 
 footer{
     background-color: map-get($colores,c-tres);
-    & > div{
-        height: 40vh;
-        a{
-            i{
+    min-height: 40vh;
+    a{
+        i{
+            color: map-get($colores,c-uno);
+            font-size: 5rem;
+            transition: 400ms;
+            @media all and (max-width: map-get($tamaños-media, t-mayor)) {
+                font-size: 2rem;
+            }
+            &:hover{
                 color: map-get($colores,c-uno);
-                font-size: 5rem;
-                transition: 400ms;
-                @media all and (max-width: map-get($tamaños-media, t-mayor)) {
-                    font-size: 2rem;
-                }
-                &:hover{
-                    color: map-get($colores,c-uno);
-                    transform: scale(1.2);
-                }
+                transform: scale(1.2);
             }
         }
-        iframe{
-            height: 20rem;
-            width: 75%;
-            @media all and (max-width: map-get($tamaños-media, t-mayor )) {
-                height: 10rem;
-                width: 90%;
-            }
+    }
+    div:nth-child(2){
+        height: 75%;
+        @media all and (max-width: map-get($tamaños-media, t-mayor )) {
+            height: 50%;
+            width: 90%;
         }
     }
 }
 
-// ------------ INDEX -------------
+// ------------ INDEX ------------- 
 
 #m-index{
-
     section{
-        @extend %altura;
         @include bg-colors;
-        
-        & > div{
-            @extend %altura;
-        }
         .carousel{
             img{
-                @extend %altura;
                 object-fit: cover;
             }
         }
         .cont-text{
             @include centrado-texto;
-        }
-        .cont-img{
-            @include centrado-cajas;
-            img{
-                display: block;
-                margin: 0 auto;
-                width: 100%;
-                border-radius: 20px;
-                box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);
+            .miBoton{
+                width: 100px;
+                height: 40px;
+                border: none;
+                border-radius: 5px;
+                &:hover{
+                    border: 2px solid #533535;
+                }
+            }
+            .uno{
+                background-color:  map-get($colores,c-uno);
+            }
+            .dos{
+                background-color:  map-get($colores,c-dos);
             }
         }
     }
@@ -171,90 +204,94 @@ footer{
 
 // ------------ VINOS -------------
 
+
 #m-vinos{
     section{
-        @extend %altura;
         @include bg-colors;
-        & > div{
-            @extend %altura;
-        }
     }
     .cont-text{
         width: 80%;
-        margin: 0 auto;
         @media all and (max-width: map-get($tamaños-media, t-medio )) {
             width: 90%;
-        }
-    }
-    .cont-img{
-        @include centrado-cajas;
-        img{
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);
-        }
-    }    
-    .cont-botellitas{
-        img{
-            display: block;
-            margin: 0 auto;
-            width: 100%;
         }
     } 
 }
 
 // ------------ TURISMO -------------
 
+// no terminado
 #m-turismo{
     section{
-        & > div{
-            @extend %altura;
-            @media all and (max-width: map-get($tamaños-media, t-medio )) {
-                height: 0%;;
-            }
-            &:nth-child(2){
-                margin-top: -10%;
-                @media all and (max-width: map-get($tamaños-media, t-medio )) {
-                    margin-top: 0%;
-                }
-            }
-        }
-        height: auto;
         background-color: map-get($colores,c-dos);
-        .tarjeta-primera{
-            @media all and (max-width: map-get($tamaños-media, t-medio )) {
-                margin-top: 5% ;
+        .fondo{
+            background-color: map-get($colores,c-dos);
+            padding: 2rem; 
+            border-radius: 10px;
+            width: 90%;
+            transition: 900ms;
+            cursor: pointer;
+            @media all and (max-width: map-get($tamaños-media, t-mayor )) {
+                background-color: map-get($colores,c-uno);
+            }
+            @media all and (max-width:344px) {
+                padding: 0.5rem;
+            }
+            &:hover{
+                @include sombra;
+            }
+            .image{
+                img{
+                    width: 80%;
+                    border-radius: 5px;
+                }
             }
         }
-        .tarjeta{
-            @media all and (max-width: map-get($tamaños-media, t-medio )) {
-                margin-bottom: 10% ;
-            }
-            .fondo{
-                margin: 0 auto;
-                background-color: map-get($colores,c-dos);
-                padding: 2rem;
-                border-radius: 10px;
-                width: 90%;
-                transition: 900ms;
-                cursor: pointer;
-                @media all and (max-width: map-get($tamaños-media, t-mayor )) {
-                    background-color: map-get($colores,c-uno);
-                }
-                &:hover{
-                    box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);
-                }
-                .image{
-                    img{
-                
-                        width: 80%;
-                        margin: 0 auto;
-                        border-radius: 5px;
+          
+        .cont__formulario{
+            form{
+                border: 2px brown solid;
+                border-radius: 5px;
+                padding: .5rem 1rem;
+                div{
+                    margin: 1rem 0;
+                    .input{
+                        width: 100%;
+                        height: 2rem;
+                        cursor: pointer;
+                        border: none;
+                        &:hover{
+                            background-color: map-get($colores,c-uno);
+                        }
+                    }
+                    textarea{
+                        border: none;
+                        min-height: 15rem;
+                        max-height: 15rem;
+                        max-width: 100%;
+                        min-width: 100%;
                     }
                 }
             }
-        }    
+        }
+        .cont-img-m{
+            img{
+                animation: move_img 5s ease-in-out infinite forwards;
+                width: 100%;
+                @keyframes move_img {
+                    0%{
+                        transform: translateY(10px);
+                    }
+                    50%{
+                        transform: translateY(-10px);
+                    }
+                    100%{
+                        transform: translateY(10px);
+                    }
+                }
+            }
+        }
     }
+
 }
 
 
@@ -262,47 +299,27 @@ footer{
 
 #m-rest{
     section{
-        @extend %altura;
         @include bg-colors;
-        
         .cont-table{
-            height: 100vh;
-            @media all and (max-width: map-get($tamaños-media, t-medio )) {
-                height: 70vh;
-            }
             table{
-                margin: 0 auto;
-                width: 80%;
+                @include centrado-texto;
                 cursor: pointer;
-                @media all and (max-width: map-get($tamaños-media, t-medio )) {
-                    width: 100%;;
-                    margin-top: 25%;
-                }
             }
         }
-        .cont-img{
-            margin: 0 auto;
-            height: 100vh;
-            @media all and (max-width: map-get($tamaños-media, t-medio )) {
-                height: 30vh;
-            }
+        div:nth-child(2){
+            height: 60%;
             div{
-                height: 60%;
-                width: 100%;
+                height: 100%;
+                width: 80%;
                 img{
-                    width: 80%;
-                    height: 100%;
-                    display: block;
-                    margin: 0 auto;
-                    object-fit: cover;
-                    border-radius: 20px;
-                    box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);
+                    width: 100%;
+                    object-fit: cover; 
+                    @extend %borde;
+                    @include sombra;
 
                 }
             }
-           
         }
-        
     }
 }
 
@@ -311,28 +328,18 @@ footer{
 #m-bodega{
     section{
         @include bg-colors;
-        
-        @extend %altura;
-        @media all and (max-width: map-get($tamaños-media, t-medio )) {
-            height: 0%;;
-        }
-       
         .carousel{
             img{
-                @extend %altura;
                 object-fit: cover;
             }
         }
         .cont-max{
-            max-width: 1400px;
+            max-width: 1400px; 
         }
         .personal{
             img{
-                display: block;
-                margin: 0 auto;
-                box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);
-                border-radius: 50%;
-                
+                @include sombra;
+                border-radius: 50%;               
             }
         }
         

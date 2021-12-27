@@ -8,49 +8,110 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }
 
-html {
-  font-size: 1rem;
-}
-
-@media all and (max-width: 481px) {
-  html {
-    font-size: .8rem;
+@media all and (max-width: 1130px) {
+  body {
+    font-size: 14px;
   }
 }
 
-#m-index section, #m-index section > div, #m-index section .carousel img, #m-vinos section, #m-vinos section > div, #m-turismo section > div, #m-rest section, #m-bodega section, #m-bodega section .carousel img {
-  height: 100vh;
+@media all and (max-width: 475px) {
+  body {
+    font-size: 12px;
+  }
 }
 
-@media all and (max-width: 768px) {
+.cont-img img, #m-rest section div:nth-child(2) div img {
+  border-radius: 20px;
+}
+
+.cont-altura {
+  height: auto;
+}
+
+.cont-altura > div {
+  padding: 5rem 0;
+}
+
+@media all and (max-width: 767px) {
+  .cont-altura > div {
+    padding: 1.5rem 0;
+  }
+}
+
+.cont-img {
+  width: 50%;
+}
+
+@media all and (max-width: 767px) {
+  .cont-img {
+    width: 65%;
+  }
+}
+
+.cont-img img {
+  -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
+          box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
+}
+
+nav {
+  background-color: #E6DDC4;
+}
+
+@media all and (max-width: 991px) {
   nav {
     background-color: #E6DDC4;
   }
 }
 
-nav .navbar-nav a {
-  font-size: 1rem;
-  font-weight: 400;
-  margin-bottom: 0;
+nav .alt-nav {
+  height: auto;
 }
 
-nav .navbar-nav a:hover {
-  border-bottom: 1px #000 solid;
-}
-
-@media all and (max-width: 768px) {
-  nav .navbar-nav a:hover {
-    border-bottom: none;
+@media all and (min-width: 991px) {
+  nav .alt-nav {
+    height: 55px;
   }
 }
 
-nav .navbar-nav .nav-link {
-  padding: 0;
+nav #navbarNav a {
+  font-size: 1rem;
+  font-weight: 400;
+  position: relative;
 }
 
-@media all and (max-width: 768px) {
+nav #navbarNav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 600ms ease-out;
+  transition: -webkit-transform 600ms ease-out;
+  transition: transform 600ms ease-out;
+  transition: transform 600ms ease-out, -webkit-transform 600ms ease-out;
+}
+
+nav #navbarNav a:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+nav #navbarNav .nav-link {
+  padding-bottom: 0;
+}
+
+@media all and (max-width: 991px) {
   .fixed-top {
     position: static;
   }
@@ -58,39 +119,35 @@ nav .navbar-nav .nav-link {
 
 footer {
   background-color: #533535;
+  min-height: 40vh;
 }
 
-footer > div {
-  height: 40vh;
-}
-
-footer > div a i {
+footer a i {
   color: #F0E9D2;
   font-size: 5rem;
   -webkit-transition: 400ms;
   transition: 400ms;
 }
 
-@media all and (max-width: 768px) {
-  footer > div a i {
+@media all and (max-width: 767px) {
+  footer a i {
     font-size: 2rem;
   }
 }
 
-footer > div a i:hover {
+footer a i:hover {
   color: #F0E9D2;
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-footer > div iframe {
-  height: 20rem;
-  width: 75%;
+footer div:nth-child(2) {
+  height: 75%;
 }
 
-@media all and (max-width: 768px) {
-  footer > div iframe {
-    height: 10rem;
+@media all and (max-width: 767px) {
+  footer div:nth-child(2) {
+    height: 50%;
     width: 90%;
   }
 }
@@ -110,7 +167,6 @@ footer > div iframe {
 
 #m-index section .cont-text {
   width: 80%;
-  margin: 0 auto;
 }
 
 @media all and (max-width: 576px) {
@@ -119,24 +175,23 @@ footer > div iframe {
   }
 }
 
-#m-index section .cont-img {
-  width: 50%;
-  margin: 0 auto;
+#m-index section .cont-text .miBoton {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
 }
 
-@media all and (max-width: 576px) {
-  #m-index section .cont-img {
-    width: 65%;
-  }
+#m-index section .cont-text .miBoton:hover {
+  border: 2px solid #533535;
 }
 
-#m-index section .cont-img img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
-          box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
+#m-index section .cont-text .uno {
+  background-color: #F0E9D2;
+}
+
+#m-index section .cont-text .dos {
+  background-color: #E6DDC4;
 }
 
 #m-vinos section:nth-child(odd) {
@@ -149,7 +204,6 @@ footer > div iframe {
 
 #m-vinos .cont-text {
   width: 80%;
-  margin: 0 auto;
 }
 
 @media all and (max-width: 576px) {
@@ -158,65 +212,11 @@ footer > div iframe {
   }
 }
 
-#m-vinos .cont-img {
-  width: 50%;
-  margin: 0 auto;
-}
-
-@media all and (max-width: 576px) {
-  #m-vinos .cont-img {
-    width: 65%;
-  }
-}
-
-#m-vinos .cont-img img {
-  width: 100%;
-  border-radius: 20px;
-  -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
-          box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
-}
-
-#m-vinos .cont-botellitas img {
-  display: block;
-  margin: 0 auto;
-  width: 100%;
-}
-
 #m-turismo section {
-  height: auto;
   background-color: #E6DDC4;
 }
 
-@media all and (max-width: 576px) {
-  #m-turismo section > div {
-    height: 0%;
-  }
-}
-
-#m-turismo section > div:nth-child(2) {
-  margin-top: -10%;
-}
-
-@media all and (max-width: 576px) {
-  #m-turismo section > div:nth-child(2) {
-    margin-top: 0%;
-  }
-}
-
-@media all and (max-width: 576px) {
-  #m-turismo section .tarjeta-primera {
-    margin-top: 5%;
-  }
-}
-
-@media all and (max-width: 576px) {
-  #m-turismo section .tarjeta {
-    margin-bottom: 10%;
-  }
-}
-
-#m-turismo section .tarjeta .fondo {
-  margin: 0 auto;
+#m-turismo section .fondo {
   background-color: #E6DDC4;
   padding: 2rem;
   border-radius: 10px;
@@ -226,21 +226,91 @@ footer > div iframe {
   cursor: pointer;
 }
 
-@media all and (max-width: 768px) {
-  #m-turismo section .tarjeta .fondo {
+@media all and (max-width: 767px) {
+  #m-turismo section .fondo {
     background-color: #F0E9D2;
   }
 }
 
-#m-turismo section .tarjeta .fondo:hover {
+@media all and (max-width: 344px) {
+  #m-turismo section .fondo {
+    padding: 0.5rem;
+  }
+}
+
+#m-turismo section .fondo:hover {
   -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
           box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
 }
 
-#m-turismo section .tarjeta .fondo .image img {
+#m-turismo section .fondo .image img {
   width: 80%;
-  margin: 0 auto;
   border-radius: 5px;
+}
+
+#m-turismo section .cont__formulario form {
+  border: 2px brown solid;
+  border-radius: 5px;
+  padding: .5rem 1rem;
+}
+
+#m-turismo section .cont__formulario form div {
+  margin: 1rem 0;
+}
+
+#m-turismo section .cont__formulario form div .input {
+  width: 100%;
+  height: 2rem;
+  cursor: pointer;
+  border: none;
+}
+
+#m-turismo section .cont__formulario form div .input:hover {
+  background-color: #F0E9D2;
+}
+
+#m-turismo section .cont__formulario form div textarea {
+  border: none;
+  min-height: 15rem;
+  max-height: 15rem;
+  max-width: 100%;
+  min-width: 100%;
+}
+
+#m-turismo section .cont-img-m img {
+  -webkit-animation: move_img 5s ease-in-out infinite forwards;
+          animation: move_img 5s ease-in-out infinite forwards;
+  width: 100%;
+}
+
+@-webkit-keyframes move_img {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+}
+
+@keyframes move_img {
+  0% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px);
+  }
 }
 
 #m-rest section:nth-child(odd) {
@@ -251,53 +321,30 @@ footer > div iframe {
   background-color: #E6DDC4;
 }
 
-#m-rest section .cont-table {
-  height: 100vh;
-}
-
-@media all and (max-width: 576px) {
-  #m-rest section .cont-table {
-    height: 70vh;
-  }
-}
-
 #m-rest section .cont-table table {
-  margin: 0 auto;
   width: 80%;
   cursor: pointer;
 }
 
 @media all and (max-width: 576px) {
   #m-rest section .cont-table table {
-    width: 100%;
-    margin-top: 25%;
+    width: 90%;
   }
 }
 
-#m-rest section .cont-img {
-  margin: 0 auto;
-  height: 100vh;
-}
-
-@media all and (max-width: 576px) {
-  #m-rest section .cont-img {
-    height: 30vh;
-  }
-}
-
-#m-rest section .cont-img div {
+#m-rest section div:nth-child(2) {
   height: 60%;
-  width: 100%;
 }
 
-#m-rest section .cont-img div img {
-  width: 80%;
+#m-rest section div:nth-child(2) div {
   height: 100%;
-  display: block;
-  margin: 0 auto;
+  width: 80%;
+}
+
+#m-rest section div:nth-child(2) div img {
+  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 20px;
   -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
           box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
 }
@@ -310,12 +357,6 @@ footer > div iframe {
   background-color: #E6DDC4;
 }
 
-@media all and (max-width: 576px) {
-  #m-bodega section {
-    height: 0%;
-  }
-}
-
 #m-bodega section .carousel img {
   -o-object-fit: cover;
      object-fit: cover;
@@ -326,8 +367,6 @@ footer > div iframe {
 }
 
 #m-bodega section .personal img {
-  display: block;
-  margin: 0 auto;
   -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
           box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
   border-radius: 50%;
