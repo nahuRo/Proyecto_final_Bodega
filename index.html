@@ -1,206 +1,338 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="vinos , turismo en bodega , restaurante y historia de nuestra bodega">
-	<meta name="keywords" content="vinos,turismo,restaurante,bodega,historia,finca,viñedo,amigos.almuerzo">
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="description" content="vinos , turismo en bodega , restaurante y historia de nuestra bodega">
+      <meta name="keywords" content="vinos,turismo,restaurante,bodega,historia,finca,viñedo,amigos.almuerzo">
 
-	<script src="https://kit.fontawesome.com/ef997cdb75.js" crossorigin="anonymous"></script> 
+      <script src="https://kit.fontawesome.com/ef997cdb75.js" crossorigin="anonymous"></script>
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	<link rel="stylesheet" href="css/estilos.css">
-	<link rel="shortcut icon" href="asset/favicon.ico" type="image/x-icon">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <link rel="stylesheet" href="css/estilos.css">
+      <link rel="shortcut icon" href="asset/favicon.ico" type="image/x-icon">
 
-	<title> Filgo </title>
+      <!--etiquetas para el open graph-->
+
+      <!-- Google / Search Engine Tags -->
+      <meta itemprop="name" content=" Filgo">
+      <meta itemprop="description" content="vinos , turismo en bodega , restaurante y historia de nuestra bodega">
+      <meta itemprop="image" content="https://nahuro.github.io/Proyecto_final_Bodega/asset/carr_uno_uno.jpg">
+
+      <!-- Facebook Meta Tags -->
+      <meta property="og:url" content="https://nahuro.github.io/Proyecto_final_Bodega">
+      <meta property="og:type" content="website">
+      <meta property="og:title" content=" Filgo">
+      <meta property="og:description" content="vinos , turismo en bodega , restaurante y historia de nuestra bodega">
+      <meta property="og:image" content="https://nahuro.github.io/Proyecto_final_Bodega/asset/carr_uno_uno.jpg">
+
+      <!-- Twitter Meta Tags -->
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:title" content=" Filgo">
+      <meta name="twitter:description" content="vinos , turismo en bodega , restaurante y historia de nuestra bodega">
+      <meta name="twitter:image" content="https://nahuro.github.io/Proyecto_final_Bodega/asset/carr_uno_uno.jpg">
+
+      <title> Filgo </title>
+
 </head>
+
 <body>
-    <header>
-
-        <div class="container-fluid p-0">
-            <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
-                <div class="container-fluid alt-nav">
-                    <a class="navbar-brand" href="index.html">
-                        <img src="asset/logo.svg" alt="logo filgo" width="80" height="80">
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <!--PARA BOTON HAMBURGUESA-->
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav negrita">
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="vinos.html">Vinos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="turismo.html">Turismo</a></li>
-                            <li class="nav-item"><a class="nav-link" href="restaurante.html">Restaurante</a></li>
-                            <li class="nav-item"><a class="nav-link" href="bodega.html">Bodega</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-    </header>
-
-    <main id="m-index">
-
-        <section class="container-fluid p-0">
-            <div id="carouselUno" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active vh-100">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="asset/carrM_uno_uno.jpg">
-                            <img src="asset/carr_uno_uno.jpg" alt="bodega" class="w-100 h-100">
-                        </picture>
-                    </div>
-                    <div class="carousel-item vh-100">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="asset/carrM_uno_dos.jpg">
-                            <img src="asset/carr_uno_dos.jpg" alt="viñedo" class="w-100 h-100">
-                        </picture>
-                    </div>
-                    <div class="carousel-item vh-100">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="asset/carrM_uno_tres.jpg">
-                            <img src="asset/carr_uno_tres.jpg" alt="uva" class="w-100 h-100">
-                        </picture>
-                    </div>
-                    <div class="carousel-item vh-100">
-                        <picture>
-                            <source media="(max-width: 767px)" srcset="asset/carrM_uno_cuatro.jpg">
-                            <img src="asset/carr_uno_cuatro.jpg" alt="bodega" class="w-100 h-100">
-                        </picture>
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselUno" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselUno" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+      <header>
+            <div class="container-fluid p-0">
+                  <nav class="navbar navbar-expand-lg navbar-light fixed-top p-0">
+                        <div class="container-fluid alto-nav">
+                              <a class="navbar-brand" href="index.html">
+                                    <img src="asset/logo.svg" alt="logo filgo" width="80" height="80" loading="lazy">
+                              </a>
+                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                              </button>
+                              <div class="collapse navbar-collapse cont-enlaces" id="navbarNav">
+                                    <ul class="navbar-nav negrita ms-auto">
+                                          <li class="nav-item"><a class="nav-link pb-0 active" aria-current="page" href="index.html">Home</a></li>
+                                          <li class="nav-item"><a class="nav-link pb-0" href="vinos.html">Vinos</a></li>
+                                          <li class="nav-item"><a class="nav-link pb-0" href="turismo.html">Turismo</a></li>
+                                          <li class="nav-item"><a class="nav-link pb-0" href="restaurante.html">Restaurante</a></li>
+                                          <li class="nav-item"><a class="nav-link pb-0" href="bodega.html">Bodega</a></li>
+                                    </ul>
+                              </div>
+                        </div>
+                  </nav>
             </div>
-        </section>
+      </header>
 
-        <section class="cont-altura container-fluid d-flex justify-content-evenly align-items-center flex-wrap p-0">
-            <div class="col-12 col-md-6">
-                <div class="cont-text mx-auto">
-                    <h2 class="mb-xxl-4 text-center">NUESTROS VINOS</h2>
-                    <p >Elaboramos vinos de alta gama a partir de las uvas cosechadas en nuestra finca Emblema, situada en Agrelo, y en las mejores zonas del Valle de Uco en la provincia de Mendoza.</p>
-                    <p ">Calidad, innovación, trayectoria heredada de la familia Raventós Codorníu, y un profundo respeto por el terruño son los pilares que nos consolidan como hacedores de grandes vinos</p>
-                    <p >Nuestros vinos son novedosos y genuinos representantes de nuestra tierra.Somos creativos respetando nuestra historia y herencia de productores de vinos de calidad.Hacemos vinos modernos, sobrios, auténticos, nobles, con una alta calidad sostenida en el tiempo y sentido de terruño.</p>
-                    <div class="d-flex justify-content-center mt-xxl-5">
-                        <a href="vinos.html">
-                            <button class="miBoton uno">Ver más</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6"> 
-                <div class="cont-img w-50 mx-auto text-center">
-                    <picture>
-                        <source media="(max-width: 767px)" srcset="asset/copaM.jpg" >
-                        <img src="asset/copa.jpg" alt="copa de vino" class="wow animate__animated  animate__fadeInRight w-100">
-                    </picture>
-                </div>
-            </div>
-        </section>
+      <main id="m-index">
+            <section>
+                  <div class="container-fluid espacio-nav p-0">
+                        <div id="carouselUno" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                          <picture>
+                                                <source media="(max-width: 768px)" srcset="asset/carrM_uno_uno.jpg">
+                                                <img src="asset/carr_uno_uno.jpg" alt="bodega Filgo" class="w-100 h-100" loading="lazy">
+                                          </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                          <picture>
+                                                <source media="(max-width: 768px)" srcset="asset/carrM_uno_dos.jpg">
+                                                <img src=" asset/carr_uno_dos.jpg" alt="viñedo atardecer" class="w-100 h-100" loading="lazy">
+                                          </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                          <picture>
+                                                <source media="(max-width: 768px)" srcset="asset/carrM_uno_tres.jpg">
+                                                <img src="asset/carr_uno_tres.jpg" alt="viñedo amanecer" class="w-100 h-100" loading="lazy">
+                                          </picture>
+                                    </div>
+                                    <div class="carousel-item">
+                                          <picture>
+                                                <source media="(max-width: 768px)" srcset="asset/carrM_uno_cuatro.jpg">
+                                                <img src="asset/carr_uno_cuatro.jpg" alt="bodega Filgo" class="w-100 h-100" loading="lazy">
+                                          </picture>
+                                    </div>
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselUno" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselUno" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="visually-hidden">Next</span>
+                              </button>
+                        </div>
+                  </div>
+            </section>
 
-        <section class="cont-altura container-fluid d-flex flex-row-reverse justify-content-evenly align-items-center flex-wrap p-0">
-            <div class="col-12 col-md-6">
-                <div class="cont-text mx-auto">
-                    <h2 class="mb-xxl-4 text-center">TURISMO</h2>
-                    <p>Tanto para descubrir los vinos de nuestro viñedo único y la particular bodega de nivel internacional, o para disfrutar del almuerzo en el restaurante o participar de nuestros eventos exclusivos, cada visitante disfruta de una experiencia sublime en Finca Filgo.</p>
-                    <p>Con la Cordillera de los Andes como telón de fondo, la tranquilidad de la viña y la imponente arquitectura de Finca Filgo, es poco sorprendente para quienes nos han visitado, que Finca Filgo fue galardonado con el trofeo al ‘Mejor Paisaje y Arquitectura’ en el concurso de los Grandes Capitales del Vino en 2009.</p>
-                    <div class="d-flex justify-content-center mt-xxl-5">
-                        <a href="turismo.html">
-                            <button class="miBoton dos">Ver más</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="cont-img w-50 mx-auto text-center">
-                    <picture>
-                        <source media="(max-width: 767px)" srcset="asset/almuerzoM.jpg" >
-                        <img src="asset/almuerzo.jpg" alt="grupo de amigos" class="wow animate__animated  animate__fadeInLeft w-100">
-                    </picture>
-                </div>
-            </div>
-        </section>
+            <section>
+                  <div class="container-fluid py-5">
+                        <div class="d-flex justify-content-evenly align-items-center flex-wrap">
+                              <div class="col-12 col-md-6">
+                                    <div class="cont-text mx-auto">
+                                          <h2 class="mb-xxl-4 text-center">NUESTROS VINOS</h2>
+                                          <p>Elaboramos vinos de alta gama a partir de las uvas cosechadas en
+                                                nuestra finca Emblema, situada en Agrelo, y en las mejores zonas
+                                                del Valle de Uco en la provincia de Mendoza.
+                                          </p>
+                                          <p>Calidad, innovación, trayectoria heredada de la familia Raventós Codorníu, 
+                                                y un profundo respeto por el terruño son los pilares que nos consolidan como hacedores de grandes vinos.
+                                          </p>
+                                          <p >Nuestros vinos son novedosos y genuinos representantes de nuestra tierra. Somos creativos respetando nuestra historia y 
+                                                herencia de productores de vinos de calidad. Hacemos vinos modernos, sobrios, auténticos, nobles, con una alta 
+                                                calidad sostenida en el tiempo.
+                                          </p>
+                                          <div class=" d-flex justify-content-center py-4">
+                                                <a href="vinos.html">
+                                                      <button class="miBoton color-btn-uno">Ver más</button>
+                                                </a>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-md-6">
+                                    <div class="cont-img mx-auto text-center">
+                                          <picture>
+                                                <source media="(max-width: 768px)" srcset="asset/copaM.jpg">
+                                                <img src="asset/copa.jpg" alt="copa de vino" class="wow animate__animated  animate__fadeInRight w-100" loading="lazy">
+                                          </picture>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </section>
 
-        <section class="cont-altura container-fluid d-flex justify-content-evenly align-items-center flex-wrap p-0">
-            <div class="col-12 col-md-6">
-                <div class="cont-text mx-auto">
-                    <h2 class="mb-xxl-4 text-center">RESTAURANTE</h2>
-                    <p>Ya sea que se trate de un almuerzo íntimo para dos, en familia o con un grupo de amigos, Finca Filgo ofrece ingredientes locales de calidad para lograr una creativa experiencia gastronómica en un ambiente relajado con la vista panorámica de la cordillera de los Andes.</p>
-                    <p>El enfoque de alta calidad de Finca Filgo trasciende a la excelente cocina de nuestro restaurante. El menú de temporada de Finca Filgo combina ingredientes locales para crear platos creativos que maridan a la perfección con nuestros vinos.</p>
-                    <div class="d-flex justify-content-center mt-xxl-5">
-                        <a  href="restaurante.html">
-                            <button class="miBoton uno">Ver más</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6"> 
-                <div class="cont-img w-50 mx-auto text-center">
-                    <picture>
-                        <source media="(max-width: 767px)" srcset="asset/comM_uno.jpg" >
-                        <img src="asset/com_uno.jpg" alt="plato de comida" class="wow animate__animated  animate__fadeInRight w-100">
-                    </picture>
-                </div>
-            </div>
-        </section>
+            <section>
+                  <div class="container-fluid py-5">
+                        <div class="d-flex flex-row-reverse justify-content-evenly align-items-center flex-wrap">
+                              <div class="col-12 col-md-6">
+                                    <div class="cont-text mx-auto">
+                                          <h2 class="mb-xxl-4 text-center">TURISMO</h2>
+                                          <p>Tanto para descubrir los vinos de nuestro viñedo único y la
+                                                particular bodega de nivel internacional, o para disfrutar del
+                                                almuerzo en el restaurante o participar de nuestros eventos
+                                                exclusivos, cada visitante disfruta de una experiencia sublime
+                                                en Finca Filgo.
+                                          </p>
+                                          <p>Con la Cordillera de los Andes como telón de fondo, la tranquilidad
+                                                de la viña y la imponente arquitectura de Finca Filgo, es poco
+                                                sorprendente para quienes nos han visitado, que Finca Filgo fue
+                                                galardonado con el trofeo al ‘Mejor Paisaje y Arquitectura’ en
+                                                el concurso de los Grandes Capitales del Vino en 2009.
+                                          </p>
+                                          <div class="d-flex justify-content-center py-4">
+                                                <a href="turismo.html">
+                                                      <button class="miBoton color-btn-dos">Ver más</button>
+                                                </a>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-md-6">
+                                    <div class="cont-img mx-auto text-center">
+                                          <picture>
+                                                <source media="(max-width: 768px)" srcset="asset/almuerzoM.jpg">
+                                                <img src="asset/almuerzo.jpg" alt="grupo de amigos" class="wow animate__animated  animate__fadeInLeft w-100" loading="lazy">
+                                          </picture>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </section>
 
-        <section class="cont-altura container-fluid d-flex flex-row-reverse justify-content-evenly align-items-center flex-wrap p-0">
-            <div class="col-12 col-md-6">
-                <div class="cont-text mx-auto">
-                    <h2 class="mb-xxl-4 text-center">NUESTROS HISTORIA</h2>
-                    <p>Un entorno de un ecosistema privilegiado. Nuestra bodega está integrada a la montaña con sus pulsaciones y la vida que late en medio de la quietud.</p>
-                    <p>El edificio de piedra inmerso en la precordillera y su viñedo conforman un oasis en un auténtico desierto de altura. Su arquitectura reúne los materiales nobles de la Cordillera de los Andes -rocas, canto rodado, granza, arena y limo- logrando una perfecta armonía con el paisaje. Una bodega-montaña integrada a los Andes.</p>
-                    <p>Nuestros vinos encierran los latidos de los Andes, sus vibraciones que dan vida a un entorno natural único.</p>
-                    <div class="d-flex justify-content-center mt-xxl-5">
-                        <a href="bodega.html">
-                            <button class="miBoton dos">Ver más</button>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6">
-                <div class="cont-img w-50 mx-auto text-center">
-                    <picture>
-                        <source media="(max-width: 767px)" srcset="asset/barricaM.jpg" >
-                        <img src="asset/barrica.jpg" alt="barricas" class="wow animate__animated  animate__fadeInLeft w-100">
-                    </picture>
-                </div>
-            </div>
-        </section>
+            <section>
+                  <div class="container-fluid py-5">
+                        <div class="d-flex justify-content-evenly align-items-center flex-wrap">
+                              <div class="col-12 col-md-6">
+                                    <div class="cont-text mx-auto">
+                                          <h2 class="mb-xxl-4 text-center">RESTAURANTE</h2>
+                                          <p>Ya sea que se trate de un almuerzo íntimo para dos, en familia o con
+                                                un grupo de amigos, Finca Filgo ofrece ingredientes locales de
+                                                calidad para lograr una creativa experiencia gastronómica en un
+                                                ambiente relajado con la vista panorámica de la cordillera de
+                                                los Andes.
+                                          </p>
+                                          <p>El enfoque de alta calidad de Finca Filgo trasciende a la excelente
+                                                cocina de nuestro restaurante. El menú de temporada de Finca
+                                                Filgo combina ingredientes locales para crear platos creativos
+                                                que maridan a la perfección con nuestros vinos.
+                                          </p>
+                                          <div class="d-flex justify-content-center py-4">
+                                                <a href="restaurante.html">
+                                                      <button class="miBoton color-btn-uno">Ver más</button>
+                                                </a>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-md-6">
+                                    <div class="cont-img mx-auto text-center">
+                                          <picture>
+                                                <source media="(max-width: 768px)" srcset="asset/comM_uno.jpg">
+                                                <img src="asset/com_uno.jpg" alt="plato de comida" class="wow animate__animated  animate__fadeInRight w-100" loading="lazy">
+                                          </picture>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </section>
 
-    </main>
+            <section>
+                  <div class="container-fluid py-5">
+                        <div class="d-flex flex-row-reverse justify-content-evenly align-items-center flex-wrap">
+                              <div class="col-12 col-md-6">
+                                    <div class="cont-text mx-auto">
+                                          <h2 class="mb-xxl-4 text-center">NUESTROS HISTORIA</h2>
+                                          <p>Un entorno de un ecosistema privilegiado. Nuestra bodega está
+                                                integrada a la montaña con sus pulsaciones y la vida que late en
+                                                medio de la quietud.
+                                          </p>
+                                          <p>El edificio de piedra inmerso en la precordillera y su viñedo
+                                                conforman un oasis en un auténtico desierto de altura. Su
+                                                arquitectura reúne los materiales nobles de la Cordillera de los
+                                                Andes como rocas, canto rodado, granza, arena y limo ; logrando una
+                                                perfecta armonía con el paisaje. Una bodega-montaña integrada a
+                                                los Andes.
+                                          </p>
+                                          <p>Nuestros vinos encierran los latidos de los Andes, sus vibraciones
+                                                que dan vida a un entorno natural único.
+                                          </p>
+                                          <div class="d-flex justify-content-center py-4">
+                                                <a href="bodega.html">
+                                                      <button class="miBoton color-btn-dos">Ver más</button>
+                                                </a>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="col-12 col-md-6">
+                                    <div class="cont-img mx-auto text-center">
+                                          <picture>
+                                                <source media="(max-width: 768px)" srcset="asset/barricaM.jpg">
+                                                <img src="asset/barrica.jpg" alt="barricas" class="wow animate__animated  animate__fadeInLeft w-100" loading="lazy">
+                                          </picture>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </section>
+      </main>
 
-    <footer class="container-fluid d-flex justify-content-evenly align-items-center flex-wrap p-0">
-        <div class="col-12 col-md-6 d-flex justify-content-center">
-            <div class="w-50">
-                <h2 class="text-center mb-5">© Filgo</h2>
-                <div class="d-flex justify-content-between w-100">
-                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
-                </div>
+      <footer>
+            <div class="container pt-5">
+                  <div class="row g-3">
+                        <div class="col-12 col-md-3">
+                              <div>
+                                    <h4>CONTACTO</h4>
+                                    <p>Avda. Ortiz de Ocampo 2839 <br>
+                                          (+54 11) 4121 8001 <br>
+                                          info@filgo.com.ar <br>
+                                    </p>
+                              </div>
+                              <div>
+                                    <h4>VISITA A BODEGA</h4>
+                                    <p>(+54 261) 490 9968 <br>
+                                          (+54 9 261) 4859656 <br>
+                                          centrodevisitas@filgo.com.ar <br>
+                                          Bodega Filgo Ruta 15 Km 29 | Agrelo Luján de Cuyo | Mendoza
+                                    </p>
+                              </div>
+                        </div>
+                        <div class="col-12 col-md-3">
+                              <h4>POLÍTICAS DE PRIVACIDAD</h4>
+                              <p>Beber con moderación. Prohibida su venta a menores de 18 años. El abuso de alcohol
+                                    es peligroso para la salud. Filgo Argentina apoya el consumo responsable a
+                                    través de Moët Hennessy, miembro del SpiritsEUROPE, DISCUS, CEEV, Entreprise &
+                                    Prevention. Aviso sobre privacidad y Cookies
+                                    <a href="#" data-bs-toggle="modal" data-bs-target="#modalTyC">Ver Términos y condiciones de uso</a>
+                              </p>
+                        </div>
+                        <div class="col-12 col-md-6">
+                              <div>
+                                    <h4 class="text-center">SEGUINOS EN </h4>
+                                    <div class="d-flex justify-content-between mx-auto cont-redes">
+                                          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+                                          <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                                          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                                    </div>
+                              </div>
+                              <div class="mt-2 cont-iframe">
+                                    <iframe class="mapa w-100 h-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13379.204439072955!2d-68.916136!3d-33.03537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31d6e1f51af10094!2sBodega%20Vistalba!5e0!3m2!1ses!2sar!4v1636061941426!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                              </div>
+                        </div>
+                  </div>
             </div>
-        </div>
-        <div class="col-12 col-sm-6 d-flex justify-content-center">
-            <iframe class="mapa w-75 h-100" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13379.204439072955!2d-68.916136!3d-33.03537!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x31d6e1f51af10094!2sBodega%20Vistalba!5e0!3m2!1ses!2sar!4v1636061941426!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </footer>
+      </footer>
 
-    <!-- Js para wow y bootstrap -->
-    <script src="js/wow.js"></script>
-    <script>
-    new WOW().init();
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <!-- Modal Para Los Terminos y Condiciones -->
+
+      <div id="modalTyC" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered tamModal">
+                  <div class="modal-content colorModal">
+                        <div class="p-3 text-center">
+                              <div>
+                                    <img src="asset/logo.svg" alt="logo filgo" width="100" height="100" loading="lazy">
+                              </div>
+                              <h2>Términos y Condiciones de Uso</h2>
+                              <p>Es requisito necesario para la adquisición de los productos que se ofrecen en este sitio, que lea y acepte los siguientes Términos y Condiciones que a continuación se redactan. El uso de nuestros servicios así como la compra de nuestros productos implicará que usted ha leído y aceptado los Términos y Condiciones de Uso en el presente documento. Todas los productos  que son ofrecidos por nuestro sitio web pudieran ser creadas, cobradas, enviadas o presentadas por una página web tercera y en tal caso estarían sujetas a sus propios Términos y Condiciones. En algunos casos, para adquirir un producto, será necesario el registro por parte del usuario, con ingreso de datos personales fidedignos y definición de una contraseña.
+                                    El usuario puede elegir y cambiar la clave para su acceso de administración de la cuenta en cualquier momento, en caso de que se haya registrado y que sea necesario para la compra de alguno de nuestros productos. https://nahuro.github.io/Proyecto_final_Bodega/ no asume la responsabilidad en caso de que entregue dicha clave a terceros.
+                                    Todas las compras y transacciones que se lleven a cabo por medio de este sitio web, están sujetas a un proceso de confirmación y verificación, el cual podría incluir la verificación del stock y disponibilidad de producto, validación de la forma de pago, validación de la factura (en caso de existir) y el cumplimiento de las condiciones requeridas por el medio de pago seleccionado. En algunos casos puede que se requiera una verificación por medio de correo electrónico.
+                                    Los precios de los productos ofrecidos en esta Tienda Online es válido solamente en las compras realizadas en este sitio web.
+                              </p>
+                              <h3>LICENCIA</h3>
+                              <p>Filgo a través de su sitio web concede una licencia para que los usuarios utilicen  los productos que son vendidos en este sitio web de acuerdo a los Términos y Condiciones que se describen en este documento.</p>
+                              <h3>PROPIEDAD</h3>
+                              <p>Usted no puede declarar propiedad intelectual o exclusiva a ninguno de nuestros productos, modificado o sin modificar. Todos los productos son propiedad  de los proveedores del contenido. En caso de que no se especifique lo contrario, nuestros productos se proporcionan  sin ningún tipo de garantía, expresa o implícita. En ningún esta compañía será  responsables de ningún daño incluyendo, pero no limitado a, daños directos, indirectos, especiales, fortuitos o consecuentes u otras pérdidas resultantes del uso o de la imposibilidad de utilizar nuestros productos.</p>
+                              <button type="button" class="miBoton color-btn-dos" data-bs-dismiss="modal">Aceptar</button>
+                        </div>
+                  </div>
+            </div>
+      </div>
+
+      <!-- Js para wow y bootstrap -->
+
+      <script src="js/wow.js"></script>
+      <script>
+            new WOW().init();
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 </body>
+
 </html>

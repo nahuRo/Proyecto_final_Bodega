@@ -1,29 +1,27 @@
 // Import
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 // Mapas
 
 $colores:(
     c-uno: #F0E9D2,
     c-dos: #E6DDC4,
-    c-tres: #533535,
-    blanco: #fff,
-    negro: #000
+    c-tres: #533535
 );
 
-$tamaños-media:(
-    t-menor: 481px,
-    t-medio: 576px,
-    t-mayor: 767px,
-    t-mmayor: 991px
+$tamaños-media:( 
+    t-sm: 576px,
+    t-md: 768px,
+    t-lg: 992px, // medida lg - donde aparce el menu hamburguesa
+    t-xl: 1200px
 );
 
-$tamaños-fontW:(
-    fw-menor: 300,
-    fw-medio: 400,
-    fw-mayor: 700
-);
+// %
+
+%borde{
+    border-radius: 20px;
+}
 
 // Mixin
 
@@ -36,176 +34,176 @@ $tamaños-fontW:(
     }
 }
 
-@mixin centrado-cajas {
-    @media all and (max-width: map-get($tamaños-media, t-mayor )) {
-        width: 65%;
-    }
-}
-
-@mixin centrado-texto {
-    width: 80%;
-    @media all and (max-width: map-get($tamaños-media, t-medio )) {
-        width: 90%;
-    }
-}
-@mixin sombra {
-    box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);   
-}
-
-// %
-
-%borde{
-    border-radius: 20px;
-}
-
-// utilidad
-
-.cont-img{
-    width: 50%;
-    @include centrado-cajas;
-    img{
-        @extend %borde;
-        @include sombra;
-    }
-} 
-
-.cont-altura{
-    height: auto;
-    & > div{
-        padding: 5rem 0;
-    }
-    @media all and (max-width: 767px) {
-        & > div{
-            padding: 1.5rem 0;
-        }
-    }
-   
-}
-
-// General
+//  General
 
 *{
     margin: 0 ; padding: 0;
     box-sizing: border-box
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-    font-family: 'Roboto', sans-serif;
-    font-size: 16px;
-    
-    @media all and (max-width: 1130px) {
+    font-family: 'Poppins', sans-serif;
+    @media all and (max-width: map-get($tamaños-media,t-xl)) {
         font-size: 14px;
     }
-    @media all and (max-width:475px) {
+    @media all and (max-width: map-get($tamaños-media,t-sm)) {
         font-size: 12px;
     }
 }
 
-nav{
-    background-color: map-get($colores,c-dos);
-    @media all and (max-width: map-get($tamaños-media, t-mmayor)) {
+// utilidad
+
+.espacio-nav{
+    margin-top: 55px;
+    @media all and (max-width: map-get($tamaños-media, t-lg )) {
+        margin-top: 0px;
+    }
+}
+
+.cont-img{
+    width: 50%;
+    @media all and (max-width: map-get($tamaños-media,t-md )) {
+        width: 80%;
+    }
+    img{
+        border-radius: 40px;
+        box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);  
+    }
+} 
+
+.miBoton{
+    width: 100px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    &:hover{
+        border: 2px solid #533535;
+    }
+}
+.color-btn-uno{
+    background-color:  map-get($colores,c-uno);
+}
+.color-btn-dos{
+    background-color:  map-get($colores,c-dos);
+}
+.tamModal{
+    max-width: 1300px;
+}
+.colorModal{
+    background-color: map-get($colores,c-uno);
+}
+
+// Compartido
+
+header{
+    nav{
         background-color: map-get($colores,c-dos);
-    }
-    .alt-nav{
-        height: auto;
-        @media all and (min-width: map-get($tamaños-media, t-mmayor)) {
-            height: 55px;
-        }
-    }
-    #navbarNav{
-        a{
-            font-size: 1rem;
-            font-weight: map-get($tamaños-fontW, fw-medio);
-            position: relative;
-            &::after{
-                content: '';
-                position: absolute;
-                width: 100%;
-                height: 2px;
-                bottom: 0;
-                left: 0;
-                background-color: #000;
-                transform: scaleX(0);
-                transform-origin: bottom right;
-                transition: transform 600ms ease-out ;
+        .alto-nav{
+            height: auto;
+            @media all and (min-width: map-get($tamaños-media, t-lg)) {
+                height: 55px;
             }
-            &:hover{
-                &::after{
-                    transform: scaleX(1);
-                    transform-origin: bottom left;
+            .cont-enlaces{
+                a{
+                    font-size: 1.2rem;
+                    position: relative;
+                    &::after{
+                        content: ' ';
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        bottom: 0;
+                        left: 0;
+                        background-color: map-get($colores, c-tres);
+                        transform: scaleX(0);
+                        transform-origin: bottom right;
+                        transition: transform 600ms ease-out ;
+                    }
+                    &:hover{
+                        &::after{
+                            transform: scaleX(1);
+                            transform-origin: bottom left;
+                        }
+                    }
                 }
             }
         }
-        .nav-link{
-            padding-bottom: 0;
-        }
     }
-}
-.fixed-top{
-    @media all and (max-width: map-get($tamaños-media, t-mmayor)) {
-        position: static;
+    .fixed-top{
+        @media all and (max-width: map-get($tamaños-media, t-lg)) {
+            position: static;
+        }
     }
 }
 
 footer{
     background-color: map-get($colores,c-tres);
-    min-height: 40vh;
-    a{
-        i{
-            color: map-get($colores,c-uno);
-            font-size: 5rem;
-            transition: 400ms;
-            @media all and (max-width: map-get($tamaños-media, t-mayor)) {
-                font-size: 2rem;
-            }
-            &:hover{
+    color: map-get($colores,c-uno);
+    .row{
+        div:nth-child(2){
+            a{
                 color: map-get($colores,c-uno);
-                transform: scale(1.2);
             }
         }
-    }
-    div:nth-child(2){
-        height: 75%;
-        @media all and (max-width: map-get($tamaños-media, t-mayor )) {
-            height: 50%;
-            width: 90%;
+        div:nth-child(3){
+            .cont-redes{
+                width: 50%;
+                @media all and (max-width: map-get($tamaños-media,t-md )) {
+                    width: 75%;
+                }
+                a{
+                    i{
+                        color: map-get($colores,c-uno);
+                        font-size: 3rem;
+                        transition: 500ms;
+                        &:hover{
+                            transform: scale(1.2);
+                        }
+                    }
+                }     
+            }
+            .cont-iframe{
+                @media all and (max-width: map-get($tamaños-media,t-md )) {
+                    height: 60%; 
+                    width: 100%; 
+                }
+            } 
         }
     }
 }
 
+h1, h2 , h3, h4{
+    font-weight: 700;
+}
+
 // ------------ INDEX ------------- 
+
 
 #m-index{
     section{
         @include bg-colors;
         .carousel{
-            img{
-                object-fit: cover;
+            .carousel-item {
+                height: calc(100vh - 55px);
+                img{
+                    object-fit: cover;
+                }
             }
         }
         .cont-text{
-            @include centrado-texto;
-            .miBoton{
-                width: 100px;
-                height: 40px;
-                border: none;
-                border-radius: 5px;
-                &:hover{
-                    border: 2px solid #533535;
-                }
-            }
-            .uno{
-                background-color:  map-get($colores,c-uno);
-            }
-            .dos{
-                background-color:  map-get($colores,c-dos);
-            }
+            width: 80%;
+            @media all and (max-width: map-get($tamaños-media, t-sm )) {
+                width: 90%;
+            }          
         }
     }
 }
 
 // ------------ VINOS -------------
-
 
 #m-vinos{
     section{
@@ -213,33 +211,34 @@ footer{
     }
     .cont-text{
         width: 80%;
-        @media all and (max-width: map-get($tamaños-media, t-medio )) {
+        @media all and (max-width: map-get($tamaños-media, t-sm )) {
             width: 90%;
         }
     } 
 }
 
 // ------------ TURISMO -------------
-
-// no terminado
+//FALTAN ESTAS SECCIONES DE ABAJO
 #m-turismo{
+    section:nth-child(1){
+        background-color: map-get($colores,c-uno);
+    }
     section{
         background-color: map-get($colores,c-dos);
         .fondo{
-            background-color: map-get($colores,c-dos);
             padding: 2rem; 
             border-radius: 10px;
             width: 90%;
             transition: 900ms;
-            cursor: pointer;
-            @media all and (max-width: map-get($tamaños-media, t-mayor )) {
+            @media all and (max-width: map-get($tamaños-media,t-md )) {
                 background-color: map-get($colores,c-uno);
             }
-            @media all and (max-width:344px) {
-                padding: 0.5rem;
+            @media all and (max-width:map-get($tamaños-media,t-sm)) {
+                padding: 1rem;
             }
             &:hover{
-                @include sombra;
+                box-shadow: 0px 0px 45px 5px rgba(0,0,0,0.32);   
+                transform: scale(1.02);
             }
             .image{
                 img{
@@ -247,11 +246,10 @@ footer{
                     border-radius: 5px;
                 }
             }
-        }
-          
+        }     
         .cont__formulario{
             form{
-                border: 2px brown solid;
+                border: 7px solid map-get($colores,c-uno);
                 border-radius: 5px;
                 padding: .5rem 1rem;
                 div{
@@ -275,10 +273,9 @@ footer{
                 }
             }
         }
-        .cont-img-m{
+        .cont-move{
             img{
                 animation: move_img 5s ease-in-out infinite forwards;
-                width: 100%;
                 @keyframes move_img {
                     0%{
                         transform: translateY(10px);
@@ -300,25 +297,18 @@ footer{
 #m-rest{
     section{
         @include bg-colors;
-        .cont-table{
-            table{
-                @include centrado-texto;
-                cursor: pointer;
-            }
+        .fondo-rest{
+            height: calc(100vh - 55px);
+            background: url(../asset/almuerzo-fondo.jpg) no-repeat center fixed;
         }
-        div:nth-child(2){
-            height: 60%;
-            div{
-                height: 100%;
-                width: 80%;
-                img{
-                    width: 100%;
-                    object-fit: cover; 
-                    @extend %borde;
-                    @include sombra;
+        .cont-chef{
+            width: 50%;
+        }
 
-                }
-            }
+        .cardMio{
+            background-color: map-get($colores,c-uno);
+            border: none;
+            border-radius: 5px;
         }
     }
 }
@@ -329,20 +319,23 @@ footer{
     section{
         @include bg-colors;
         .carousel{
-            img{
-                object-fit: cover;
+            .carousel-item {
+                height: calc(100vh - 55px);
+                img{
+                    object-fit: cover;
+                }
             }
-        }
-        .cont-max{
-            max-width: 1400px; 
-        }
-        .personal{
-            img{
-                @include sombra;
-                border-radius: 50%;               
-            }
-        }
-        
+        } 
     }
-   
+    .galeria{    
+        img{
+            object-fit: cover;
+            transition: 500ms;
+            cursor: pointer;
+            border-radius: 4px;
+            &:hover{
+                transform: scale(1.05);
+            }
+        }
+    }
 }

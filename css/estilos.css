@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -6,38 +6,33 @@
           box-sizing: border-box;
 }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+html {
+  scroll-behavior: smooth;
 }
 
-@media all and (max-width: 1130px) {
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+@media all and (max-width: 1200px) {
   body {
     font-size: 14px;
   }
 }
 
-@media all and (max-width: 475px) {
+@media all and (max-width: 576px) {
   body {
     font-size: 12px;
   }
 }
 
-.cont-img img, #m-rest section div:nth-child(2) div img {
-  border-radius: 20px;
+.espacio-nav {
+  margin-top: 55px;
 }
 
-.cont-altura {
-  height: auto;
-}
-
-.cont-altura > div {
-  padding: 5rem 0;
-}
-
-@media all and (max-width: 767px) {
-  .cont-altura > div {
-    padding: 1.5rem 0;
+@media all and (max-width: 992px) {
+  .espacio-nav {
+    margin-top: 0px;
   }
 }
 
@@ -45,51 +40,72 @@ body {
   width: 50%;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
   .cont-img {
-    width: 65%;
+    width: 80%;
   }
 }
 
 .cont-img img {
+  border-radius: 40px;
   -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
           box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
 }
 
-nav {
+.miBoton {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+
+.miBoton:hover {
+  border: 2px solid #533535;
+}
+
+.color-btn-uno {
+  background-color: #F0E9D2;
+}
+
+.color-btn-dos {
   background-color: #E6DDC4;
 }
 
-@media all and (max-width: 991px) {
-  nav {
-    background-color: #E6DDC4;
-  }
+.tamModal {
+  max-width: 1300px;
 }
 
-nav .alt-nav {
+.colorModal {
+  background-color: #F0E9D2;
+}
+
+header nav {
+  background-color: #E6DDC4;
+}
+
+header nav .alto-nav {
   height: auto;
 }
 
-@media all and (min-width: 991px) {
-  nav .alt-nav {
+@media all and (min-width: 992px) {
+  header nav .alto-nav {
     height: 55px;
   }
 }
 
-nav #navbarNav a {
-  font-size: 1rem;
-  font-weight: 400;
+header nav .alto-nav .cont-enlaces a {
+  font-size: 1.2rem;
   position: relative;
 }
 
-nav #navbarNav a::after {
-  content: '';
+header nav .alto-nav .cont-enlaces a::after {
+  content: ' ';
   position: absolute;
   width: 100%;
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #000;
+  background-color: #533535;
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
   -webkit-transform-origin: bottom right;
@@ -100,56 +116,59 @@ nav #navbarNav a::after {
   transition: transform 600ms ease-out, -webkit-transform 600ms ease-out;
 }
 
-nav #navbarNav a:hover::after {
+header nav .alto-nav .cont-enlaces a:hover::after {
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
 }
 
-nav #navbarNav .nav-link {
-  padding-bottom: 0;
-}
-
-@media all and (max-width: 991px) {
-  .fixed-top {
+@media all and (max-width: 992px) {
+  header .fixed-top {
     position: static;
   }
 }
 
 footer {
   background-color: #533535;
-  min-height: 40vh;
-}
-
-footer a i {
   color: #F0E9D2;
-  font-size: 5rem;
-  -webkit-transition: 400ms;
-  transition: 400ms;
 }
 
-@media all and (max-width: 767px) {
-  footer a i {
-    font-size: 2rem;
+footer .row div:nth-child(2) a {
+  color: #F0E9D2;
+}
+
+footer .row div:nth-child(3) .cont-redes {
+  width: 50%;
+}
+
+@media all and (max-width: 768px) {
+  footer .row div:nth-child(3) .cont-redes {
+    width: 75%;
   }
 }
 
-footer a i:hover {
+footer .row div:nth-child(3) .cont-redes a i {
   color: #F0E9D2;
+  font-size: 3rem;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+footer .row div:nth-child(3) .cont-redes a i:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
 
-footer div:nth-child(2) {
-  height: 75%;
+@media all and (max-width: 768px) {
+  footer .row div:nth-child(3) .cont-iframe {
+    height: 60%;
+    width: 100%;
+  }
 }
 
-@media all and (max-width: 767px) {
-  footer div:nth-child(2) {
-    height: 50%;
-    width: 90%;
-  }
+h1, h2, h3, h4 {
+  font-weight: 700;
 }
 
 #m-index section:nth-child(odd) {
@@ -160,7 +179,11 @@ footer div:nth-child(2) {
   background-color: #E6DDC4;
 }
 
-#m-index section .carousel img {
+#m-index section .carousel .carousel-item {
+  height: calc(100vh - 55px);
+}
+
+#m-index section .carousel .carousel-item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -173,25 +196,6 @@ footer div:nth-child(2) {
   #m-index section .cont-text {
     width: 90%;
   }
-}
-
-#m-index section .cont-text .miBoton {
-  width: 100px;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-}
-
-#m-index section .cont-text .miBoton:hover {
-  border: 2px solid #533535;
-}
-
-#m-index section .cont-text .uno {
-  background-color: #F0E9D2;
-}
-
-#m-index section .cont-text .dos {
-  background-color: #E6DDC4;
 }
 
 #m-vinos section:nth-child(odd) {
@@ -212,35 +216,39 @@ footer div:nth-child(2) {
   }
 }
 
+#m-turismo section:nth-child(1) {
+  background-color: #F0E9D2;
+}
+
 #m-turismo section {
   background-color: #E6DDC4;
 }
 
 #m-turismo section .fondo {
-  background-color: #E6DDC4;
   padding: 2rem;
   border-radius: 10px;
   width: 90%;
   -webkit-transition: 900ms;
   transition: 900ms;
-  cursor: pointer;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 768px) {
   #m-turismo section .fondo {
     background-color: #F0E9D2;
   }
 }
 
-@media all and (max-width: 344px) {
+@media all and (max-width: 576px) {
   #m-turismo section .fondo {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 }
 
 #m-turismo section .fondo:hover {
   -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
           box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 #m-turismo section .fondo .image img {
@@ -249,7 +257,7 @@ footer div:nth-child(2) {
 }
 
 #m-turismo section .cont__formulario form {
-  border: 2px brown solid;
+  border: 7px solid #F0E9D2;
   border-radius: 5px;
   padding: .5rem 1rem;
 }
@@ -277,10 +285,9 @@ footer div:nth-child(2) {
   min-width: 100%;
 }
 
-#m-turismo section .cont-img-m img {
+#m-turismo section .cont-move img {
   -webkit-animation: move_img 5s ease-in-out infinite forwards;
           animation: move_img 5s ease-in-out infinite forwards;
-  width: 100%;
 }
 
 @-webkit-keyframes move_img {
@@ -321,32 +328,19 @@ footer div:nth-child(2) {
   background-color: #E6DDC4;
 }
 
-#m-rest section .cont-table table {
-  width: 80%;
-  cursor: pointer;
+#m-rest section .fondo-rest {
+  height: calc(100vh - 55px);
+  background: url(../asset/almuerzo-fondo.jpg) no-repeat center fixed;
 }
 
-@media all and (max-width: 576px) {
-  #m-rest section .cont-table table {
-    width: 90%;
-  }
+#m-rest section .cont-chef {
+  width: 50%;
 }
 
-#m-rest section div:nth-child(2) {
-  height: 60%;
-}
-
-#m-rest section div:nth-child(2) div {
-  height: 100%;
-  width: 80%;
-}
-
-#m-rest section div:nth-child(2) div img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
-          box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
+#m-rest section .cardMio {
+  background-color: #F0E9D2;
+  border: none;
+  border-radius: 5px;
 }
 
 #m-bodega section:nth-child(odd) {
@@ -357,18 +351,26 @@ footer div:nth-child(2) {
   background-color: #E6DDC4;
 }
 
-#m-bodega section .carousel img {
+#m-bodega section .carousel .carousel-item {
+  height: calc(100vh - 55px);
+}
+
+#m-bodega section .carousel .carousel-item img {
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-#m-bodega section .cont-max {
-  max-width: 1400px;
+#m-bodega .galeria img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
-#m-bodega section .personal img {
-  -webkit-box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
-          box-shadow: 0px 0px 45px 5px rgba(0, 0, 0, 0.32);
-  border-radius: 50%;
+#m-bodega .galeria img:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 /*# sourceMappingURL=estilos.css.map */
