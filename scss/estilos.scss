@@ -218,21 +218,16 @@ h1, h2 , h3, h4{
 }
 
 // ------------ TURISMO -------------
-//FALTAN ESTAS SECCIONES DE ABAJO
+
 #m-turismo{
-    section:nth-child(1){
-        background-color: map-get($colores,c-uno);
-    }
     section{
-        background-color: map-get($colores,c-dos);
+        @include bg-colors;
         .fondo{
             padding: 2rem; 
             border-radius: 10px;
             width: 90%;
             transition: 900ms;
-            @media all and (max-width: map-get($tamaños-media,t-md )) {
-                background-color: map-get($colores,c-uno);
-            }
+            background-color: map-get($colores,c-uno);
             @media all and (max-width:map-get($tamaños-media,t-sm)) {
                 padding: 1rem;
             }
@@ -249,7 +244,7 @@ h1, h2 , h3, h4{
         }     
         .cont__formulario{
             form{
-                border: 7px solid map-get($colores,c-uno);
+                border: 7px solid map-get($colores,c-dos);
                 border-radius: 5px;
                 padding: .5rem 1rem;
                 div{
@@ -299,12 +294,15 @@ h1, h2 , h3, h4{
         @include bg-colors;
         .fondo-rest{
             height: calc(100vh - 55px);
-            background: url(../asset/almuerzo-fondo.jpg) no-repeat center fixed;
+            position: relative;
+           h1{
+               position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               width: fit-content;
+           }
         }
-        .cont-chef{
-            width: 50%;
-        }
-
         .cardMio{
             background-color: map-get($colores,c-uno);
             border: none;
@@ -326,15 +324,15 @@ h1, h2 , h3, h4{
                 }
             }
         } 
-    }
-    .galeria{    
-        img{
-            object-fit: cover;
-            transition: 500ms;
-            cursor: pointer;
-            border-radius: 4px;
-            &:hover{
-                transform: scale(1.05);
+        .galeria{    
+            img{
+                object-fit: cover;
+                transition: 500ms;
+                cursor: pointer;
+                border-radius: 4px;
+                &:hover{
+                    transform: scale(1.05);
+                }
             }
         }
     }

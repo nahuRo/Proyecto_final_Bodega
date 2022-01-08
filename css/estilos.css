@@ -216,11 +216,11 @@ h1, h2, h3, h4 {
   }
 }
 
-#m-turismo section:nth-child(1) {
+#m-turismo section:nth-child(odd) {
   background-color: #F0E9D2;
 }
 
-#m-turismo section {
+#m-turismo section:nth-child(even) {
   background-color: #E6DDC4;
 }
 
@@ -230,12 +230,7 @@ h1, h2, h3, h4 {
   width: 90%;
   -webkit-transition: 900ms;
   transition: 900ms;
-}
-
-@media all and (max-width: 768px) {
-  #m-turismo section .fondo {
-    background-color: #F0E9D2;
-  }
+  background-color: #F0E9D2;
 }
 
 @media all and (max-width: 576px) {
@@ -257,7 +252,7 @@ h1, h2, h3, h4 {
 }
 
 #m-turismo section .cont__formulario form {
-  border: 7px solid #F0E9D2;
+  border: 7px solid #E6DDC4;
   border-radius: 5px;
   padding: .5rem 1rem;
 }
@@ -330,11 +325,18 @@ h1, h2, h3, h4 {
 
 #m-rest section .fondo-rest {
   height: calc(100vh - 55px);
-  background: url(../asset/almuerzo-fondo.jpg) no-repeat center fixed;
+  position: relative;
 }
 
-#m-rest section .cont-chef {
-  width: 50%;
+#m-rest section .fondo-rest h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 #m-rest section .cardMio {
@@ -360,7 +362,7 @@ h1, h2, h3, h4 {
      object-fit: cover;
 }
 
-#m-bodega .galeria img {
+#m-bodega section .galeria img {
   -o-object-fit: cover;
      object-fit: cover;
   -webkit-transition: 500ms;
@@ -369,7 +371,7 @@ h1, h2, h3, h4 {
   border-radius: 4px;
 }
 
-#m-bodega .galeria img:hover {
+#m-bodega section .galeria img:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
