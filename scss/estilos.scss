@@ -13,7 +13,7 @@ $colores:(
 $tamaños-media:( 
     t-sm: 576px,
     t-md: 768px,
-    t-lg: 992px, // medida lg - donde aparce el menu hamburguesa
+    t-lg: 992px, 
     t-xl: 1200px
 );
 
@@ -33,6 +33,14 @@ $tamaños-media:(
         background-color: map-get($colores,c-dos);
     }
 }
+@mixin carruselW {
+    .carousel-item {
+        height: calc(100vh - 55px);
+        img{
+            object-fit: cover;
+        }
+    }
+}
 
 //  General
 
@@ -47,6 +55,7 @@ html{
 
 body{
     font-family: 'Poppins', sans-serif;
+    font-size: 16px;
     @media all and (max-width: map-get($tamaños-media,t-xl)) {
         font-size: 14px;
     }
@@ -187,12 +196,7 @@ h1, h2 , h3, h4{
     section{
         @include bg-colors;
         .carousel{
-            .carousel-item {
-                height: calc(100vh - 55px);
-                img{
-                    object-fit: cover;
-                }
-            }
+            @include carruselW;
         }
         .cont-text{
             width: 80%;
@@ -292,17 +296,6 @@ h1, h2 , h3, h4{
 #m-rest{
     section{
         @include bg-colors;
-        .fondo-rest{
-            height: calc(100vh - 55px);
-            position: relative;
-           h1{
-               position: absolute;
-               top: 50%;
-               left: 50%;
-               transform: translate(-50%,-50%);
-               width: fit-content;
-           }
-        }
         .cardMio{
             background-color: map-get($colores,c-uno);
             border: none;
@@ -317,12 +310,7 @@ h1, h2 , h3, h4{
     section{
         @include bg-colors;
         .carousel{
-            .carousel-item {
-                height: calc(100vh - 55px);
-                img{
-                    object-fit: cover;
-                }
-            }
+            @include carruselW;
         } 
         .galeria{    
             img{

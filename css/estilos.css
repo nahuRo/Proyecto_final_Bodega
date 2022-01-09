@@ -12,6 +12,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
+  font-size: 16px;
 }
 
 @media all and (max-width: 1200px) {
@@ -321,22 +322,6 @@ h1, h2, h3, h4 {
 
 #m-rest section:nth-child(even) {
   background-color: #E6DDC4;
-}
-
-#m-rest section .fondo-rest {
-  height: calc(100vh - 55px);
-  position: relative;
-}
-
-#m-rest section .fondo-rest h1 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
 }
 
 #m-rest section .cardMio {
